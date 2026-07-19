@@ -1,0 +1,42 @@
+import type { Metadata } from "next";
+import Link from "next/link";
+import { PageHero } from "@/components/page-hero";
+import { PhotoCard } from "@/components/photo-card";
+import { categories, gallery } from "@/data";
+
+export const metadata: Metadata = {
+  title: "Gallery",
+  description: "Explore Sofia Hub fashion, lifestyle, and photography collections.",
+};
+
+export default function GalleryPage() {
+  return (
+    <>
+      <PageHero
+        description="A visual diary of refined looks, quiet moments, and beautiful light—curated across Sofia's signature collections."
+        eyebrow="The visual journal"
+        title="Gallery"
+      />
+      <section className="section-space bg-ivory">
+        <div className="page-shell">
+          <div className="mb-10 flex gap-2 overflow-x-auto pb-3 sm:flex-wrap sm:overflow-visible sm:pb-0">
+            {categories.map((category) => (
+              <Link
+                className="shrink-0 border border-ink/15 px-4 py-3 text-[9px] font-bold uppercase tracking-editorial text-ink transition-colors hover:border-ink hover:bg-ink hover:text-ivory"
+                href={`#${category.toLowerCase().replaceAll(" ", "-")}`}
+                key={category}
+              >
+                {category}
+              </Link>
+            ))}
+          </div>
+          <div className="grid items-start gap-4 sm:grid-cols-2 sm:gap-6 lg:grid-cols-3">
+            {gallery.map((photo) => (
+              <PhotoCard key={photo.id} photo={photo} />
+            ))}
+          </div>
+        </div>
+      </section>
+    </>
+  );
+}

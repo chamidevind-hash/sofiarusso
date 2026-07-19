@@ -1,0 +1,23 @@
+[
+  {
+    "slug": "mobile-wallpapers",
+    "title": "Mobile Wallpapers",
+    "description": "Elegant vertical edits designed to bring a quiet-luxury mood to your lock screen.",
+    "image": "/images/sofia-wallpaper-preview.webp",
+    "format": "iPhone & Android"
+  },
+  {
+    "slug": "desktop-wallpapers",
+    "title": "Desktop Wallpapers",
+    "description": "Wide, minimal compositions for a warm and beautifully considered workspace.",
+    "image": "/images/sofia-wallpaper-preview.webp",
+    "format": "Desktop & Tablet"
+  },
+  {
+    "slug": "weekly-sofia-pack",
+    "title": "Weekly Sofia Pack",
+    "description": "A fresh curated mix of seasonal wallpapers and exclusive editorial moments.",
+    "image": "/images/sofia-wallpaper-preview.webp",
+    "format": "Mixed sizes"
+  }
+]

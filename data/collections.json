@@ -1,0 +1,50 @@
+[
+  {
+    "slug": "satin-collection",
+    "title": "Satin Collection",
+    "description": "Fluid silhouettes and champagne tones, styled with an understated evening elegance.",
+    "image": "/images/sofia-collection-satin.webp",
+    "itemCount": 12,
+    "featured": true
+  },
+  {
+    "slug": "mirror-selfies",
+    "title": "Mirror Selfies",
+    "description": "Polished everyday portraits built around clean lines, soft light, and timeless tailoring.",
+    "image": "/images/sofia-collection-mirror.webp",
+    "itemCount": 9,
+    "featured": true
+  },
+  {
+    "slug": "hotel-looks",
+    "title": "Hotel Looks",
+    "description": "Quiet-luxury dressing inspired by beautiful lobbies, late checkouts, and weekends away.",
+    "image": "/images/sofia-collection-hotel.webp",
+    "itemCount": 10,
+    "featured": true
+  },
+  {
+    "slug": "golden-hour",
+    "title": "Golden Hour",
+    "description": "Warm light, natural movement, and luminous neutrals captured just before sunset.",
+    "image": "/images/sofia-gallery-1.webp",
+    "itemCount": 8,
+    "featured": false
+  },
+  {
+    "slug": "city-nights",
+    "title": "City Nights",
+    "description": "Confident black looks set against warm windows and the glow of the city after dark.",
+    "image": "/images/sofia-gallery-2.webp",
+    "itemCount": 7,
+    "featured": false
+  },
+  {
+    "slug": "casual-style",
+    "title": "Casual Style",
+    "description": "Relaxed staples, crisp cotton, and effortless pieces for beautifully simple days.",
+    "image": "/images/sofia-gallery-3.webp",
+    "itemCount": 11,
+    "featured": false
+  }
+]

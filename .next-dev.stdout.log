@@ -1,0 +1,18 @@
+
+> sofia-hub@1.0.0 dev
+> next dev --hostname 127.0.0.1 --port 3000
+
+▲ Next.js 16.2.9 (Turbopack)
+- Local:         http://127.0.0.1:3000
+- Network:       http://127.0.0.1:3000
+✓ Ready in 855ms
+
+ GET / 200 in 3.6s (next.js: 3.1s, application-code: 541ms)
+ GET /gallery 200 in 467ms (next.js: 325ms, application-code: 142ms)
+ GET /collections 200 in 503ms (next.js: 333ms, application-code: 170ms)
+ GET /downloads 200 in 445ms (next.js: 360ms, application-code: 85ms)
+ GET /blog 200 in 391ms (next.js: 299ms, application-code: 92ms)
+ GET /about 200 in 395ms (next.js: 299ms, application-code: 96ms)
+ GET /join 200 in 424ms (next.js: 339ms, application-code: 85ms)
+✓ Compiled in 75ms
+[?25h

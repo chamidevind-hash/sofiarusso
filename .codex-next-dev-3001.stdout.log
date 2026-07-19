@@ -1,0 +1,13 @@
+
+> sofia-hub@1.0.0 dev
+> next dev --hostname 127.0.0.1 --port 3001
+
+▲ Next.js 16.2.9 (Turbopack)
+- Local:         http://127.0.0.1:3001
+- Network:       http://127.0.0.1:3001
+- Environments: .env.local
+✓ Ready in 580ms
+
+ GET / 200 in 754ms (next.js: 227ms, application-code: 527ms)
+ GET / 200 in 167ms (next.js: 7ms, application-code: 159ms)
+ GET /downloads 200 in 440ms (next.js: 405ms, application-code: 35ms)

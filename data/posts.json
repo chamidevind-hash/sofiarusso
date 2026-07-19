@@ -1,0 +1,29 @@
+[
+  {
+    "slug": "luxury-mirror-selfie-look",
+    "title": "How to Create a Luxury Mirror Selfie Look",
+    "excerpt": "A simple guide to natural light, balanced framing, and styling a polished mirror portrait.",
+    "image": "/images/sofia-gallery-2.webp",
+    "category": "Photography",
+    "readTime": "4 min read",
+    "date": "June 24, 2026"
+  },
+  {
+    "slug": "satin-dress-styling-ideas",
+    "title": "Satin Dress Styling Ideas",
+    "excerpt": "Let beautiful fabric lead the look with clean accessories, tonal layers, and thoughtful contrast.",
+    "image": "/images/sofia-collection-satin.webp",
+    "category": "Style Notes",
+    "readTime": "5 min read",
+    "date": "June 17, 2026"
+  },
+  {
+    "slug": "golden-hour-photo-inspiration",
+    "title": "Golden Hour Photo Inspiration",
+    "excerpt": "Find flattering angles, warm textures, and quiet locations for your next sunset photo session.",
+    "image": "/images/sofia-gallery-1.webp",
+    "category": "Inspiration",
+    "readTime": "3 min read",
+    "date": "June 10, 2026"
+  }
+]

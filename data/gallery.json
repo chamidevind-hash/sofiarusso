@@ -1,0 +1,11 @@
+[
+  { "id": 1, "title": "Champagne Silhouette", "category": "Satin Collection", "image": "/images/sofia-gallery-1.webp", "orientation": "tall" },
+  { "id": 2, "title": "The Tailored Mirror", "category": "Mirror Selfies", "image": "/images/sofia-gallery-2.webp", "orientation": "portrait" },
+  { "id": 3, "title": "Lobby Light", "category": "Hotel Looks", "image": "/images/sofia-gallery-3.webp", "orientation": "tall" },
+  { "id": 4, "title": "Last Light", "category": "Golden Hour", "image": "/images/sofia-gallery-1.webp", "orientation": "portrait" },
+  { "id": 5, "title": "After Dark", "category": "City Nights", "image": "/images/sofia-gallery-2.webp", "orientation": "tall" },
+  { "id": 6, "title": "Coffee & Cotton", "category": "Casual Style", "image": "/images/sofia-gallery-3.webp", "orientation": "portrait" },
+  { "id": 7, "title": "Ivory Study", "category": "Satin Collection", "image": "/images/sofia-gallery-1.webp", "orientation": "portrait" },
+  { "id": 8, "title": "The Cream Suit", "category": "Hotel Looks", "image": "/images/sofia-gallery-2.webp", "orientation": "portrait" },
+  { "id": 9, "title": "Midnight Minimal", "category": "City Nights", "image": "/images/sofia-gallery-3.webp", "orientation": "portrait" }
+]
