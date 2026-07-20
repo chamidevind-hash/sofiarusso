@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Image from "next/image";
+import { PrivatePoolDayCard } from "@/components/private-pool-day/private-pool-day-card";
 import { SofiaFeaturedCard } from "@/components/sofia-featured-card";
 import { SofiaFooter } from "@/components/sofia-footer";
 import { SofiaImageGrid } from "@/components/sofia-image-grid";
@@ -62,6 +63,10 @@ export default function HomePage() {
 
           <div className="mt-6 sm:mt-7">
             <SofiaFeaturedCard />
+          </div>
+
+          <div className="mt-3">
+            <PrivatePoolDayCard />
           </div>
 
           <div className="mt-6 flex items-center justify-between sm:mt-7">

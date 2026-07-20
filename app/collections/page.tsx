@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
+import { PrivatePoolDayCard } from "@/components/private-pool-day/private-pool-day-card";
 import { featuredCollection, losAngelesAfterDarkImages } from "@/data/sofia-collection";
 import { collections } from "@/data";
 
@@ -38,6 +39,10 @@ export default function CollectionsPage() {
             <p className="mt-4 text-[12px] font-bold text-white/74">{losAngelesAfterDarkImages.length} images</p>
           </div>
         </Link>
+
+        <section className="mt-8">
+          <PrivatePoolDayCard />
+        </section>
 
         <section className="mt-8">
           <h2 className="text-[20px] font-black">More Sofia stories</h2>
