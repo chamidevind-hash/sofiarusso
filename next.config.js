@@ -34,6 +34,9 @@ const nextConfig = {
   images: {
     formats: ["image/avif", "image/webp"],
   },
+  experimental: {
+    cpus: 1,
+  },
   poweredByHeader: false,
   turbopack: {
     root: __dirname,
