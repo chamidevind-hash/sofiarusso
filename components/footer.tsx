@@ -1,45 +1,26 @@
 import Link from "next/link";
-import { ArrowUpRightIcon } from "@/components/icons";
 
 const footerLinks = [
-  ["Gallery", "/gallery"],
-  ["Collections", "/collections"],
-  ["Downloads", "/downloads"],
-  ["Blog", "/blog"],
-  ["About", "/about"],
-  ["Join", "/join"],
+  { href: "/", label: "Home" },
+  { href: "/privacy", label: "Privacy" },
+  { href: "/terms", label: "Terms" },
 ];
 
 export function Footer() {
   return (
-    <footer className="bg-ink text-ivory">
-      <div className="page-shell py-14 sm:py-16 lg:py-20">
-        <div className="grid gap-12 border-b border-ivory/15 pb-14 md:grid-cols-[1.4fr_1fr] lg:gap-24">
-          <div>
-            <Link className="font-display text-4xl" href="/">
-              Sofia Hub
+    <footer className="border-t border-white/10 bg-[#0b0b0d] text-white">
+      <div className="mx-auto flex w-full max-w-6xl flex-col gap-4 px-4 py-8 text-[12px] text-white/54 sm:flex-row sm:items-center sm:justify-between sm:px-6">
+        <div>
+          <p className="font-bold text-white">© 2026 SofiaRusso</p>
+          <p className="mt-1">Sofia is an AI virtual creator.</p>
+        </div>
+        <nav aria-label="Footer navigation" className="flex flex-wrap gap-3">
+          {footerLinks.map((link) => (
+            <Link className="rounded-full px-2 py-1 font-semibold text-white/62 hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#ff4f91]" href={link.href} key={link.href}>
+              {link.label}
             </Link>
-            <p className="mt-5 max-w-md text-sm leading-7 text-ivory/60">
-              Style, lifestyle, and exclusive digital collections from a fictional AI creator with a modern point of view.
-            </p>
-          </div>
-          <div className="grid grid-cols-2 gap-x-8 gap-y-4">
-            {footerLinks.map(([label, href]) => (
-              <Link
-                className="group flex items-center justify-between border-b border-ivory/10 py-3 text-[10px] font-bold uppercase tracking-editorial text-ivory/75 transition-colors hover:text-ivory"
-                href={href}
-                key={href}
-              >
-                {label}
-                <ArrowUpRightIcon className="h-3.5 w-3.5 opacity-0 transition-opacity group-hover:opacity-100" />
-              </Link>
-            ))}
-          </div>
-        </div>
-        <div className="flex flex-col gap-3 pt-6 text-[9px] uppercase tracking-[0.2em] text-ivory/40 sm:flex-row sm:items-center sm:justify-between">
-          <p>© {new Date().getFullYear()} Sofia Hub. All rights reserved.</p>
-          <p>AI-created lifestyle editorial</p>
-        </div>
+          ))}
+        </nav>
       </div>
     </footer>
   );

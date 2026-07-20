@@ -17,30 +17,30 @@ const manrope = Manrope({
   display: "swap",
 });
 
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000";
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://sofiarusso.vip";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default: "Sofia Hub — Style & Digital Collections",
-    template: "%s | Sofia Hub",
+    default: "SofiaRusso - SofiaHub",
+    template: "%s | SofiaRusso",
   },
-  description: "Style, lifestyle, and exclusive digital collections from Sofia, a fictional AI lifestyle creator.",
-  keywords: ["Sofia Hub", "AI creator", "fashion inspiration", "lifestyle", "wallpapers", "digital collections"],
-  authors: [{ name: "Sofia Hub" }],
-  creator: "Sofia Hub",
+  description: "Virtual Sofia Russo collections, HD phone wallpapers, official merchandise and creator updates.",
+  keywords: ["Sofia Russo", "SofiaHub", "AI creator", "wallpapers", "digital collections"],
+  authors: [{ name: "SofiaRusso" }],
+  creator: "SofiaRusso",
   openGraph: {
-    title: "Sofia Hub",
-    description: "Style, lifestyle, and exclusive digital collections.",
+    title: "SofiaRusso",
+    description: "Virtual Sofia Russo collections, HD phone wallpapers and creator updates.",
     type: "website",
     locale: "en_US",
-    siteName: "Sofia Hub",
-    images: [{ url: "/images/sofia-hero.webp", width: 1024, height: 1536, alt: "Sofia Hub editorial" }],
+    siteName: "SofiaRusso",
+    images: [{ url: "/images/sofia-hero.webp", width: 1024, height: 1536, alt: "SofiaRusso editorial" }],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Sofia Hub",
-    description: "Style, lifestyle, and exclusive digital collections.",
+    title: "SofiaRusso",
+    description: "Virtual Sofia Russo collections, HD phone wallpapers and creator updates.",
     images: ["/images/sofia-hero.webp"],
   },
   robots: { index: true, follow: true },

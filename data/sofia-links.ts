@@ -50,7 +50,7 @@ export type SofiaPreviewImage = {
 };
 
 const paypalCoffeeUrl =
-  process.env.NEXT_PUBLIC_PAYPAL_COFFEE_URL ?? "https://www.paypal.me/YOURHANDLE/5USD";
+  process.env.NEXT_PUBLIC_PAYPAL_COFFEE_URL ?? "https://www.paypal.me/SofiaRusso/5USD";
 
 const facebookUrl = process.env.NEXT_PUBLIC_FACEBOOK_URL ?? "https://facebook.com/";
 const instagramUrl = process.env.NEXT_PUBLIC_INSTAGRAM_URL ?? "https://instagram.com/";
@@ -60,7 +60,7 @@ const amazonWishlistUrl = process.env.NEXT_PUBLIC_AMAZON_WISHLIST_URL ?? "https:
 export const sofiaProfile = {
   name: "Sofia",
   username: "@sofia",
-  meta: "AI Virtual Creator · Los Angeles",
+  meta: "AI Virtual Creator - Los Angeles",
   bio: "Luxury nights, private diaries and exclusive virtual collections.",
   coverImage: "/images/sofia-wallpaper-preview.webp",
   avatarImage: "/images/sofia-collection-mirror.webp",
@@ -72,7 +72,7 @@ export const sofiaFeaturedCollection = {
   title: "Los Angeles After Dark",
   subtitle: "Sofia's latest exclusive collection",
   cta: "Explore collection",
-  href: "/collections",
+  href: "/collections/los-angeles-after-dark",
   image: "/images/sofia-wallpaper-preview.webp",
 };
 
@@ -91,7 +91,7 @@ export const sofiaLinks: SofiaLink[] = [
     icon: "lock",
     title: "Enter SofiaHub",
     subtitle: "Exclusive collections and private diaries",
-    href: "/collections",
+    href: "/join",
     variant: "pink",
     label: "Popular",
   },
@@ -117,7 +117,7 @@ export const sofiaLinks: SofiaLink[] = [
     icon: "images",
     title: "Latest Exclusive Collection",
     subtitle: "Unseen photos from Los Angeles",
-    href: "/collections",
+    href: "/collections/los-angeles-after-dark",
     variant: "coral",
   },
   {
@@ -179,23 +179,23 @@ export const sofiaSocialLinks: SofiaSocialLink[] = [
 export const sofiaPreviewImages: SofiaPreviewImage[] = [
   {
     alt: "Sofia overlooking the city at night",
-    href: "/collections",
+    href: "/collections/los-angeles-after-dark",
     image: "/images/sofia-wallpaper-preview.webp",
     featured: true,
   },
   {
     alt: "Sofia in a hotel mirror portrait",
-    href: "/collections",
+    href: "/collections/los-angeles-after-dark",
     image: "/images/sofia-collection-mirror.webp",
   },
   {
     alt: "Sofia in a luxury hotel lobby",
-    href: "/collections",
+    href: "/collections/los-angeles-after-dark",
     image: "/images/sofia-collection-hotel.webp",
   },
   {
     alt: "Sofia in a warm hotel room at golden hour",
-    href: "/collections",
+    href: "/collections/los-angeles-after-dark",
     image: "/images/sofia-collection-satin.webp",
   },
 ];
