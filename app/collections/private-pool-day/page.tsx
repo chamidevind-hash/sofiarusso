@@ -95,6 +95,9 @@ export default async function PrivatePoolDayPage() {
                   ))}
                 </div>
                 <p className="mt-3 text-center text-[12px] font-bold text-white/62">{privatePoolDayCollection.lockedCountLabel}</p>
+                <p className="mt-2 text-center text-[12px] leading-5 text-white/54">
+                  Choose a membership package to access the complete collection.
+                </p>
                 <div className="mt-6 flex flex-col gap-3 min-[390px]:flex-row">
                   <Link className="inline-flex flex-1 items-center justify-center rounded-full bg-white px-5 py-3 text-[13px] font-black text-[#101012]" href={privatePoolDayCollection.joinHref}>
                     {privatePoolDayCollection.unlockText}
