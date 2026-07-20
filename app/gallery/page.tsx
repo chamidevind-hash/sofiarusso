@@ -30,7 +30,7 @@ export default function GalleryPage() {
               </Link>
             ))}
           </div>
-          <div className="grid items-start gap-4 sm:grid-cols-2 sm:gap-6 lg:grid-cols-3">
+          <div className="grid grid-cols-[repeat(2,minmax(0,1fr))] items-start gap-3 min-[390px]:gap-4 lg:grid-cols-3" data-gallery-grid>
             {gallery.map((photo) => (
               <PhotoCard key={photo.id} photo={photo} />
             ))}

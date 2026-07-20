@@ -3,6 +3,7 @@ import { Cormorant_Garamond, Manrope } from "next/font/google";
 import "./globals.css";
 import { Footer } from "@/components/footer";
 import { Header } from "@/components/header";
+import { ServiceWorkerCleanup } from "@/components/service-worker-cleanup";
 
 const cormorant = Cormorant_Garamond({
   subsets: ["latin"],
@@ -56,6 +57,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
   return (
     <html lang="en" className={`${cormorant.variable} ${manrope.variable}`}>
       <body>
+        <ServiceWorkerCleanup />
         <Header />
         <main>{children}</main>
         <Footer />

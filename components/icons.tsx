@@ -9,6 +9,8 @@ const baseProps = {
   strokeLinecap: "round" as const,
   strokeLinejoin: "round" as const,
   viewBox: "0 0 24 24",
+  width: 24,
+  height: 24,
 };
 
 export function ArrowUpRightIcon(props: IconProps) {

@@ -12,6 +12,8 @@ const lineProps = {
   strokeLinecap: "round" as const,
   strokeLinejoin: "round" as const,
   viewBox: "0 0 24 24",
+  width: 24,
+  height: 24,
 };
 
 export function SofiaIcon({ name, ...props }: IconProps) {
@@ -40,7 +42,7 @@ export function SofiaIcon({ name, ...props }: IconProps) {
       );
     case "facebook":
       return (
-        <svg aria-hidden="true" fill="currentColor" viewBox="0 0 24 24" {...props}>
+        <svg aria-hidden="true" fill="currentColor" height="24" viewBox="0 0 24 24" width="24" {...props}>
           <path d="M14.1 8.2V6.8c0-.72.48-1.12 1.2-1.12h1.72V3.1A22.7 22.7 0 0 0 14.5 3c-2.5 0-4.2 1.53-4.2 4.3v.9H7.9v2.95h2.4V21h3.1v-9.85h2.45l.47-2.95H13.4v-.63c0-.85.23-1.37.7-1.37Z" />
         </svg>
       );
@@ -78,7 +80,7 @@ export function SofiaIcon({ name, ...props }: IconProps) {
       );
     case "instagram":
       return (
-        <svg aria-hidden="true" viewBox="0 0 24 24" {...props}>
+        <svg aria-hidden="true" height="24" viewBox="0 0 24 24" width="24" {...props}>
           <defs>
             <linearGradient id="sofia-instagram-gradient" x1="4" x2="20" y1="20" y2="4">
               <stop offset="0" stopColor="#ff6a5f" />
@@ -117,7 +119,7 @@ export function SofiaIcon({ name, ...props }: IconProps) {
       );
     case "paypal":
       return (
-        <svg aria-hidden="true" fill="currentColor" viewBox="0 0 24 24" {...props}>
+        <svg aria-hidden="true" fill="currentColor" height="24" viewBox="0 0 24 24" width="24" {...props}>
           <path d="M8.2 20.7H5.1L7.8 3.3h6.58c3.3 0 5.22 1.9 4.7 4.9-.48 2.9-2.93 4.85-6.34 4.85h-2.32l-.62 3.85h2.04c3.15 0 5.56-1.6 6.45-4.08.22.66.23 1.47.08 2.36-.5 3.1-2.88 5.52-6.62 5.52H9.12l-.92 0Zm2.78-10.32h2.18c1.42 0 2.48-.78 2.7-2.02.22-1.28-.56-2.2-2-2.2h-2.2l-.68 4.22Z" />
         </svg>
       );
