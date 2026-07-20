@@ -6,7 +6,7 @@ export function SofiaImageGrid() {
   return (
     <section className="mt-7">
       <h2 className="text-[17px] font-extrabold leading-6 text-[var(--text-primary)]">Latest from Sofia</h2>
-      <div className="mt-3 grid grid-cols-2 gap-2.5">
+      <div className="mt-3 grid grid-cols-[repeat(2,minmax(0,1fr))] gap-2.5">
         {sofiaPreviewImages.map((item, index) => (
           <Link
             aria-label={`Open ${item.alt}`}

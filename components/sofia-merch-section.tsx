@@ -17,7 +17,7 @@ export function SofiaMerchSection() {
           aria-hidden="true"
           className="absolute inset-0 opacity-[0.18] [background-image:radial-gradient(circle_at_18px_18px,rgba(255,255,255,0.32)_1.5px,transparent_1.5px)] [background-size:28px_28px]"
         />
-        <span aria-hidden="true" className="absolute -right-10 -top-12 h-28 w-28 rounded-full border border-white/22 sm:h-32 sm:w-32" />
+        <span aria-hidden="true" className="absolute right-3 top-3 h-20 w-20 rounded-full border border-white/18 sm:-right-6 sm:-top-8 sm:h-32 sm:w-32" />
         <span className="relative grid h-10 w-10 place-items-center rounded-[13px] bg-white/18 text-white ring-1 ring-white/24 sm:h-11 sm:w-11 sm:rounded-[14px]">
           <SofiaIcon className="h-5 w-5" name="bag" />
         </span>

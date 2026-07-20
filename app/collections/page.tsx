@@ -41,7 +41,7 @@ export default function CollectionsPage() {
 
         <section className="mt-8">
           <h2 className="text-[20px] font-black">More Sofia stories</h2>
-          <div className="mt-4 grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
+          <div className="mt-4 grid min-w-0 gap-3 sm:grid-cols-2 lg:grid-cols-4">
             {comingSoon.map((collection) => (
               <article className="overflow-hidden rounded-[20px] border border-white/10 bg-[#17171a]" key={collection.slug}>
                 <div className="relative aspect-[4/5]">

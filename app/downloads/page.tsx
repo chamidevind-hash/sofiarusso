@@ -26,7 +26,7 @@ export default function DownloadsPage() {
           </p>
         </header>
 
-        <section className="mt-7 grid gap-4 min-[380px]:grid-cols-2 lg:grid-cols-3">
+        <section className="mt-7 grid min-w-0 gap-4 min-[380px]:grid-cols-[repeat(2,minmax(0,1fr))] lg:grid-cols-3">
           {sofiaWallpapers.map((wallpaper, index) => (
             <article className="rounded-[22px] border border-white/10 bg-[#17171a] p-3 shadow-[0_18px_48px_rgba(0,0,0,0.24)]" key={wallpaper.id}>
               <div className="mx-auto max-w-[210px] rounded-[30px] border border-white/10 bg-black p-2 shadow-[inset_0_0_0_1px_rgba(255,255,255,0.08)]">
@@ -47,11 +47,11 @@ export default function DownloadsPage() {
                   <span className="shrink-0 rounded-full bg-white/8 px-2 py-1 text-[10px] font-bold text-white/60">{wallpaper.category}</span>
                 </div>
                 {wallpaper.dimensions ? <p className="mt-1 text-[12px] text-white/48">{wallpaper.dimensions}</p> : null}
-                <div className="mt-4 grid grid-cols-2 gap-2">
+                <div className="mt-4 grid grid-cols-[repeat(2,minmax(0,1fr))] gap-2">
                   <a className="rounded-full bg-white px-3 py-2 text-center text-[12px] font-black text-[#101012]" download href={wallpaper.download}>
                     Download
                   </a>
-                  <a className="rounded-full border border-white/10 bg-white/8 px-3 py-2 text-center text-[12px] font-black text-white" href={wallpaper.download} rel="noopener noreferrer" target="_blank">
+                  <a className="rounded-full border border-white/10 bg-white/8 px-2 py-2 text-center text-[12px] font-black text-white min-[390px]:px-3" href={wallpaper.download} rel="noopener noreferrer" target="_blank">
                     Open Full Size
                   </a>
                 </div>

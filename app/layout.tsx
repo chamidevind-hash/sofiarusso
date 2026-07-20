@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Cormorant_Garamond, Manrope } from "next/font/google";
 import "./globals.css";
 import { Footer } from "@/components/footer";
@@ -18,6 +18,12 @@ const manrope = Manrope({
 });
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://sofiarusso.vip";
+
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  viewportFit: "cover",
+};
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),

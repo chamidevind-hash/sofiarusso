@@ -19,8 +19,8 @@ const tileClassByVariant: Record<SofiaLinkVariant, string> = {
 export function SofiaLinkCard({ link }: SofiaLinkCardProps) {
   const isPrimary = link.variant === "primary";
   const className = isPrimary
-    ? "group grid min-h-[72px] grid-cols-[44px_minmax(0,1fr)_36px] items-center gap-3 rounded-[20px] border border-white/85 bg-white px-3.5 py-3 text-left text-[#101012] shadow-[0_18px_44px_rgba(255,79,145,0.18)] transition duration-250 hover:-translate-y-0.5 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white active:scale-[0.985] sm:min-h-[80px] sm:grid-cols-[48px_minmax(0,1fr)_38px] sm:px-4 sm:py-4"
-    : "group grid min-h-[72px] grid-cols-[44px_minmax(0,1fr)_36px] items-center gap-3 rounded-[20px] border border-[var(--border)] bg-[var(--surface)] px-3.5 py-3 text-left text-[var(--text-primary)] shadow-[0_14px_34px_rgba(0,0,0,0.22)] transition duration-250 hover:-translate-y-0.5 hover:border-white/18 hover:bg-[var(--surface-hover)] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--accent-pink)] active:scale-[0.985] sm:min-h-[80px] sm:grid-cols-[48px_minmax(0,1fr)_38px] sm:px-4 sm:py-4";
+    ? "group grid min-h-[72px] w-full min-w-0 grid-cols-[44px_minmax(0,1fr)_36px] items-center gap-2.5 rounded-[20px] border border-white/85 bg-white px-3 py-3 text-left text-[#101012] shadow-[0_18px_44px_rgba(255,79,145,0.18)] transition duration-250 hover:-translate-y-0.5 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white active:scale-[0.985] min-[360px]:gap-3 min-[360px]:px-3.5 sm:min-h-[80px] sm:grid-cols-[48px_minmax(0,1fr)_38px] sm:px-4 sm:py-4"
+    : "group grid min-h-[72px] w-full min-w-0 grid-cols-[44px_minmax(0,1fr)_36px] items-center gap-2.5 rounded-[20px] border border-[var(--border)] bg-[var(--surface)] px-3 py-3 text-left text-[var(--text-primary)] shadow-[0_14px_34px_rgba(0,0,0,0.22)] transition duration-250 hover:-translate-y-0.5 hover:border-white/18 hover:bg-[var(--surface-hover)] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--accent-pink)] active:scale-[0.985] min-[360px]:gap-3 min-[360px]:px-3.5 sm:min-h-[80px] sm:grid-cols-[48px_minmax(0,1fr)_38px] sm:px-4 sm:py-4";
 
   const content = (
     <>
@@ -28,11 +28,11 @@ export function SofiaLinkCard({ link }: SofiaLinkCardProps) {
         <SofiaIcon className="h-[21px] w-[21px] sm:h-[23px] sm:w-[23px]" name={link.icon} />
       </span>
       <span className="min-w-0">
-        <span className="flex min-w-0 items-center gap-2">
+        <span className="flex min-w-0 flex-wrap items-center gap-x-2 gap-y-0.5">
           <span className="truncate text-[15px] font-extrabold leading-5 tracking-normal">{link.title}</span>
           {link.label ? (
             <span
-              className={`shrink-0 rounded-full px-2 py-0.5 text-[10px] font-black leading-4 tracking-normal ${
+              className={`max-w-full shrink rounded-full px-2 py-0.5 text-[10px] font-black leading-4 tracking-normal min-[390px]:shrink-0 ${
                 isPrimary ? "bg-[#111111] text-white" : "bg-white/8 text-white/70"
               }`}
             >

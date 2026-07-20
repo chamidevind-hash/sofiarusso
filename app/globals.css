@@ -21,9 +21,17 @@
   box-sizing: border-box;
 }
 
+html,
+body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
 html {
   scroll-behavior: smooth;
   background: #f8f4ec;
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
 }
 
 body {
@@ -40,6 +48,7 @@ body {
 }
 
 img {
+  max-width: 100%;
   user-select: none;
 }
 

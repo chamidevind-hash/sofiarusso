@@ -19,10 +19,10 @@ export default function GalleryPage() {
       />
       <section className="section-space bg-ivory">
         <div className="page-shell">
-          <div className="mb-10 flex gap-2 overflow-x-auto pb-3 sm:flex-wrap sm:overflow-visible sm:pb-0">
+          <div className="mb-10 flex min-w-0 flex-wrap gap-2">
             {categories.map((category) => (
               <Link
-                className="shrink-0 border border-ink/15 px-4 py-3 text-[9px] font-bold uppercase tracking-editorial text-ink transition-colors hover:border-ink hover:bg-ink hover:text-ivory"
+                className="min-w-0 border border-ink/15 px-3 py-3 text-[9px] font-bold uppercase tracking-editorial text-ink transition-colors hover:border-ink hover:bg-ink hover:text-ivory sm:px-4"
                 href={`#${category.toLowerCase().replaceAll(" ", "-")}`}
                 key={category}
               >

@@ -71,7 +71,7 @@ export default function JoinPage() {
             <p className="mt-3 max-w-xl text-[14px] leading-6 text-white/74 sm:text-[16px]">
               Explore exclusive virtual collections, new weekly drops, HD phone wallpapers and Sofia's official merchandise.
             </p>
-            <div className="mt-5 flex flex-wrap gap-3">
+            <div className="mt-5 flex min-w-0 flex-wrap gap-3">
               <Link className="rounded-full bg-white px-5 py-3 text-[13px] font-black text-[#101012] transition hover:-translate-y-0.5 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#ff4f91]" href="/collections/los-angeles-after-dark">
                 View Latest Collection
               </Link>
@@ -84,7 +84,7 @@ export default function JoinPage() {
 
         <section className="mt-8">
           <h2 className="text-[24px] font-black">Inside SofiaHub</h2>
-          <div className="mt-4 grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
+          <div className="mt-4 grid min-w-0 gap-3 sm:grid-cols-2 lg:grid-cols-4">
             {features.map((feature) => {
               const card = (
                 <>
@@ -120,7 +120,7 @@ export default function JoinPage() {
               Explore the Collection
             </Link>
           </div>
-          <div className="grid grid-cols-3 gap-2">
+          <div className="grid grid-cols-[repeat(3,minmax(0,1fr))] gap-2">
             {previewImages.map((src, index) => (
               <div className={`relative overflow-hidden rounded-[18px] ${index === 0 ? "col-span-2 aspect-[4/5]" : "aspect-[4/5]"}`} key={src}>
                 <Image alt="Sofia latest drop preview" className="object-cover" fill sizes="(max-width: 640px) 33vw, 220px" src={src} />

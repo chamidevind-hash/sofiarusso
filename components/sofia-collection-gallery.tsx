@@ -44,7 +44,7 @@ export function SofiaCollectionGallery({ images }: SofiaCollectionGalleryProps) 
 
   return (
     <>
-      <div className="grid grid-cols-2 gap-2.5 sm:gap-3 lg:grid-cols-3">
+      <div className="grid grid-cols-[repeat(2,minmax(0,1fr))] gap-2.5 sm:gap-3 lg:grid-cols-3">
         {images.map((image, index) => (
           <button
             aria-label={`Open image ${index + 1}: ${image.alt}`}
