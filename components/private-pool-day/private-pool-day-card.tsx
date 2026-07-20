@@ -24,7 +24,7 @@ export function PrivatePoolDayCard({ compact = false }: PrivatePoolDayCardProps)
         src={privatePoolDayCollection.coverImage}
         unoptimized
       />
-      <div className="absolute inset-0 bg-gradient-to-b from-black/10 via-black/18 to-black/82" />
+      <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-black/10 via-black/18 to-black/82" />
       <span className="absolute left-4 top-4 inline-flex items-center gap-1.5 rounded-full bg-white px-3 py-1.5 text-[10px] font-black uppercase tracking-normal text-[#101012] shadow-[0_8px_22px_rgba(0,0,0,0.2)]">
         <SofiaIcon className="h-3.5 w-3.5" name="lock" />
         {privatePoolDayCollection.badge}

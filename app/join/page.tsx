@@ -99,7 +99,7 @@ export default function JoinPage() {
             sizes="(max-width: 768px) 100vw, 1152px"
             src="/images/sofia-wallpaper-preview.webp"
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-[#0b0b0d] via-black/50 to-black/18" />
+          <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-[#0b0b0d] via-black/50 to-black/18" />
           <div className="absolute inset-x-0 bottom-0 max-w-2xl p-5 sm:p-7">
             <p className="text-[10px] font-black uppercase tracking-[0.18em] text-[#ff4f91]">Welcome to SofiaHub</p>
             <h1 className="mt-2 text-[34px] font-black leading-9 tracking-normal sm:text-[48px] sm:leading-[1]">Enter Sofia's World</h1>
@@ -186,10 +186,10 @@ export default function JoinPage() {
                   ))}
                 </ul>
 
-                <div className="mt-6 pt-2">
+                <div className="relative z-20 mt-6 pt-2">
                   {membershipPackage.paypalUrl ? (
                     <a
-                      className={`inline-flex w-full items-center justify-center rounded-full px-5 py-3 text-[13px] font-black transition hover:-translate-y-0.5 ${
+                      className={`relative z-20 inline-flex w-full items-center justify-center rounded-full px-5 py-3 text-[13px] font-black transition hover:-translate-y-0.5 ${
                         membershipPackage.featured ? "bg-white text-[#101012]" : "border border-white/12 bg-white/8 text-white hover:bg-white/12"
                       }`}
                       href={membershipPackage.paypalUrl}
