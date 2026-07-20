@@ -38,7 +38,7 @@ export default function LosAngelesAfterDarkPage() {
               A virtual night-time photo story inspired by Los Angeles views, elegant interiors and Sofia's signature style.
             </p>
             <p className="mt-3 w-fit rounded-full border border-white/10 bg-white/8 px-3 py-1 text-[11px] font-bold text-white/70">
-              Sofia is an AI virtual creator.
+              Sofia is a virtual creator.
             </p>
           </div>
         </section>

@@ -135,7 +135,7 @@ export default function JoinPage() {
           <a className="mt-4 inline-flex rounded-full bg-white px-5 py-3 text-[13px] font-black text-[#101012]" href={coffeeUrl} rel="noopener noreferrer" target="_blank">
             Buy Sofia a Coffee - $5
           </a>
-          <p className="mt-3 text-[11px] text-white/68">Sofia is an AI virtual creator. Support is voluntary.</p>
+          <p className="mt-3 text-[11px] text-white/68">Sofia is a virtual creator. Support is voluntary.</p>
         </section>
       </main>
     </div>

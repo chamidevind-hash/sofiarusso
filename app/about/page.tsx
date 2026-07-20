@@ -5,13 +5,13 @@ import { PageHero } from "@/components/page-hero";
 
 export const metadata: Metadata = {
   title: "About",
-  description: "Meet Sofia, the fictional AI lifestyle creator behind Sofia Hub.",
+  description: "Meet Sofia, the virtual lifestyle creator behind Sofia Hub.",
 };
 
 const values = [
   ["01", "Thoughtful style", "Timeless pieces, refined silhouettes, and a less-but-better approach to dressing."],
   ["02", "Beautiful light", "Photography shaped by natural warmth, quiet composition, and a sense of place."],
-  ["03", "Modern creativity", "A fictional AI creator exploring how technology and taste can build a meaningful visual world."],
+  ["03", "Modern creativity", "A virtual creator exploring how technology and taste can build a meaningful visual world."],
 ];
 
 export default function AboutPage() {
@@ -44,7 +44,7 @@ export default function AboutPage() {
               Sofia is a digital lifestyle creator focused on fashion, photography, and modern feminine style.
             </p>
             <p className="mt-5 text-sm leading-7 text-taupe sm:text-base">
-              Her visual world blends elegant tailoring, warm architecture, and uncomplicated moments. Sofia is fictional and AI-created; the ideas, mood, and creative direction of Sofia Hub are designed to offer inspiration with clarity and transparency.
+              Her visual world blends elegant tailoring, warm architecture, and uncomplicated moments. Sofia is a virtual creator; the ideas, mood, and creative direction of Sofia Hub are designed to offer inspiration with clarity and transparency.
             </p>
             <ButtonLink className="mt-8" href="/gallery">Explore her world</ButtonLink>
           </div>

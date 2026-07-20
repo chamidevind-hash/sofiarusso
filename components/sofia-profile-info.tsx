@@ -27,10 +27,10 @@ export function SofiaProfileInfo() {
       <div className="mt-1 flex items-center justify-center gap-2">
         <h1 className="text-[22px] font-bold leading-6 tracking-normal text-[var(--text-primary)]">{sofiaProfile.name}</h1>
         <span className="rounded-full border border-white/10 bg-white/8 px-2 py-0.5 text-[10px] font-extrabold leading-4 text-white/78">
-          AI Virtual Creator
+          Virtual Creator
         </span>
       </div>
-      <p className="text-[14px] font-semibold leading-[18px] text-[var(--text-secondary)]">@sofia • Los Angeles</p>
+      <p className="text-[14px] font-semibold leading-[18px] text-[var(--text-secondary)]">{sofiaProfile.meta}</p>
       <p className="mx-auto mt-0.5 line-clamp-2 max-w-[280px] text-[13px] leading-[1.3] text-[var(--text-secondary)]">
         {sofiaProfile.bio}
       </p>

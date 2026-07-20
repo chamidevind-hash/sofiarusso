@@ -60,7 +60,7 @@ const amazonWishlistUrl = process.env.NEXT_PUBLIC_AMAZON_WISHLIST_URL ?? "https:
 export const sofiaProfile = {
   name: "Sofia",
   username: "@sofia",
-  meta: "AI Virtual Creator - Los Angeles",
+  meta: "Virtual Creator · Los Angeles",
   bio: "Luxury nights, private diaries and exclusive virtual collections.",
   coverImage: "/images/sofia-wallpaper-preview.webp",
   avatarImage: "/images/sofia-collection-mirror.webp",
@@ -205,7 +205,7 @@ export const sofiaSupport = {
   text: "Support new locations, outfits and exclusive virtual photoshoots.",
   buttonText: "Buy Sofia a Coffee - $5",
   href: paypalCoffeeUrl,
-  note: "Sofia is an AI virtual creator. Support is voluntary.",
+  note: "Sofia is a virtual creator. Support is voluntary.",
 };
 
 export const sofiaMerch = {

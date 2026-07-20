@@ -19,8 +19,15 @@ export function SofiaCollectionGallery({ images }: SofiaCollectionGalleryProps) 
       return;
     }
 
-    const previousOverflow = document.body.style.overflow;
+    const previousBodyOverflow = document.body.style.overflow;
+    const previousBodyOverflowY = document.body.style.overflowY;
+    const previousHtmlOverflow = document.documentElement.style.overflow;
+    const previousHtmlOverflowY = document.documentElement.style.overflowY;
+
     document.body.style.overflow = "hidden";
+    document.body.style.overflowY = "hidden";
+    document.documentElement.style.overflow = "hidden";
+    document.documentElement.style.overflowY = "hidden";
 
     const onKeyDown = (event: KeyboardEvent) => {
       if (event.key === "Escape") {
@@ -37,7 +44,10 @@ export function SofiaCollectionGallery({ images }: SofiaCollectionGalleryProps) 
     window.addEventListener("keydown", onKeyDown);
 
     return () => {
-      document.body.style.overflow = previousOverflow;
+      document.body.style.overflow = previousBodyOverflow;
+      document.body.style.overflowY = previousBodyOverflowY;
+      document.documentElement.style.overflow = previousHtmlOverflow;
+      document.documentElement.style.overflowY = previousHtmlOverflowY;
       window.removeEventListener("keydown", onKeyDown);
     };
   }, [activeIndex, images.length]);

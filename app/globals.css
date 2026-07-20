@@ -23,8 +23,11 @@
 
 html,
 body {
+  width: 100%;
+  min-height: 100%;
   max-width: 100%;
   overflow-x: hidden;
+  overflow-y: auto;
 }
 
 html {
@@ -40,6 +43,7 @@ body {
   color: #12110f;
   font-family: var(--font-manrope), Arial, sans-serif;
   text-rendering: optimizeLegibility;
+  touch-action: pan-y;
 }
 
 ::selection {
@@ -65,7 +69,6 @@ body:has(.sofia-bio-page) {
 .sofia-bio-page {
   color-scheme: dark;
   -webkit-tap-highlight-color: transparent;
-  overscroll-behavior-y: contain;
 }
 
 @layer components {

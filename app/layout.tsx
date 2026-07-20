@@ -33,7 +33,7 @@ export const metadata: Metadata = {
     template: "%s | SofiaRusso",
   },
   description: "Virtual Sofia Russo collections, HD phone wallpapers, official merchandise and creator updates.",
-  keywords: ["Sofia Russo", "SofiaHub", "AI creator", "wallpapers", "digital collections"],
+  keywords: ["Sofia Russo", "SofiaHub", "virtual creator", "wallpapers", "digital collections"],
   authors: [{ name: "SofiaRusso" }],
   creator: "SofiaRusso",
   openGraph: {
