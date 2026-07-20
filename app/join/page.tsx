@@ -1,8 +1,10 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 
 const insiderUrl = process.env.NEXT_PUBLIC_PAYPAL_INSIDER_URL;
 const vipUrl = process.env.NEXT_PUBLIC_PAYPAL_VIP_URL;
 const lifetimeUrl = process.env.NEXT_PUBLIC_PAYPAL_LIFETIME_URL;
+const supportEmail = "hello@sofiahub.com";
 
 console.log({
   insiderConfigured: Boolean(insiderUrl),
@@ -129,6 +131,27 @@ export default function JoinPage() {
         <p className="mx-auto mt-5 max-w-3xl rounded-[18px] border border-white/10 bg-white/6 px-4 py-3 text-center text-[12px] leading-5 text-white/58">
           Payments are processed securely through PayPal. Access instructions will be sent after payment.
         </p>
+
+        <section className="mx-auto mt-6 max-w-3xl rounded-[24px] border border-white/10 bg-[#17171a] p-5 text-center sm:p-6">
+          <h2 className="text-[24px] font-black">Already a Member?</h2>
+          <p className="mx-auto mt-2 max-w-xl text-[14px] leading-6 text-white/64">
+            Sign in to access your unlocked collections and member-only downloads.
+          </p>
+          <div className="mt-5">
+            <Link
+              className="inline-flex rounded-full border border-white/12 bg-white/8 px-5 py-3 text-[13px] font-black text-white transition hover:bg-white/12 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#ff4f91]"
+              href="/member-login"
+            >
+              Member Sign In
+            </Link>
+          </div>
+          <p className="mt-4 text-[12px] leading-5 text-white/50">
+            Need help accessing your membership?{" "}
+            <a className="font-bold text-white/76 underline decoration-white/20 underline-offset-4 hover:text-white" href={`mailto:${supportEmail}`}>
+              Contact support.
+            </a>
+          </p>
+        </section>
       </main>
     </div>
   );

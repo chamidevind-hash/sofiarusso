@@ -9,6 +9,7 @@ const navLinks = [
   { href: "/", label: "Home" },
   { href: "/collections", label: "Collections" },
   { href: "/downloads", label: "Wallpapers" },
+  { href: "/member-login", label: "Member Sign In" },
 ];
 
 const merchUrl = process.env.NEXT_PUBLIC_FOURTHWALL_URL ?? "https://fourthwall.com/";
