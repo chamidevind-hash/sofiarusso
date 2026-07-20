@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
-import { sofiaWallpapers } from "@/data/sofia-wallpapers";
+import { sofiaAtHomeDescription, sofiaAtHomeWallpapers, sofiaWallpapers } from "@/data/sofia-wallpapers";
+import type { SofiaWallpaper } from "@/data/sofia-wallpapers";
 
 export const metadata: Metadata = {
   title: "HD Sofia Phone Wallpapers - Sofia Russo",
@@ -12,6 +13,46 @@ export const metadata: Metadata = {
     images: [{ url: "/downloads/wallpapers/sofia-los-angeles-night-wallpaper.webp", width: 2048, height: 1024, alt: "Sofia phone wallpapers" }],
   },
 };
+
+type WallpaperCardProps = {
+  wallpaper: SofiaWallpaper;
+  featured?: boolean;
+};
+
+function WallpaperCard({ wallpaper, featured = false }: WallpaperCardProps) {
+  return (
+    <article className="min-w-0 rounded-[22px] border border-white/10 bg-[#17171a] p-2.5 shadow-[0_18px_48px_rgba(0,0,0,0.24)] min-[380px]:p-3">
+      <div className="mx-auto max-w-[210px] rounded-[28px] border border-white/10 bg-black p-1.5 shadow-[inset_0_0_0_1px_rgba(255,255,255,0.08)] min-[380px]:p-2">
+        <div className="relative aspect-[9/16] overflow-hidden rounded-[22px] bg-[#202024]">
+          <Image
+            alt={wallpaper.alt}
+            className="object-contain"
+            fill
+            loading="lazy"
+            sizes={featured ? "(max-width: 640px) 46vw, (max-width: 1024px) 23vw, 240px" : "(max-width: 640px) 46vw, 260px"}
+            src={wallpaper.preview}
+          />
+        </div>
+      </div>
+      <div className="pt-3 min-[380px]:pt-4">
+        <div className="flex min-w-0 flex-col gap-1.5 min-[390px]:flex-row min-[390px]:items-center min-[390px]:justify-between min-[390px]:gap-2">
+          <h2 className="truncate text-[14px] font-black min-[380px]:text-[16px]">{wallpaper.title}</h2>
+          <span className="w-fit shrink-0 rounded-full bg-white/8 px-2 py-1 text-[9px] font-bold text-white/60 min-[380px]:text-[10px]">
+            {wallpaper.category}
+          </span>
+        </div>
+        {wallpaper.dimensions ? <p className="mt-1 text-[11px] text-white/48 min-[380px]:text-[12px]">{wallpaper.dimensions}</p> : null}
+        <a
+          className="mt-3 inline-flex w-full items-center justify-center rounded-full bg-white px-2 py-2 text-center text-[11px] font-black text-[#101012] transition hover:-translate-y-0.5 min-[380px]:px-3 min-[380px]:text-[12px]"
+          download
+          href={wallpaper.download}
+        >
+          Download HD
+        </a>
+      </div>
+    </article>
+  );
+}
 
 export default function DownloadsPage() {
   return (
@@ -26,38 +67,37 @@ export default function DownloadsPage() {
           </p>
         </header>
 
-        <section className="mt-7 grid min-w-0 gap-4 min-[380px]:grid-cols-[repeat(2,minmax(0,1fr))] lg:grid-cols-3">
-          {sofiaWallpapers.map((wallpaper, index) => (
-            <article className="rounded-[22px] border border-white/10 bg-[#17171a] p-3 shadow-[0_18px_48px_rgba(0,0,0,0.24)]" key={wallpaper.id}>
-              <div className="mx-auto max-w-[210px] rounded-[30px] border border-white/10 bg-black p-2 shadow-[inset_0_0_0_1px_rgba(255,255,255,0.08)]">
-                <div className="relative aspect-[9/16] overflow-hidden rounded-[24px] bg-[#202024]">
-                  <Image
-                    alt={`${wallpaper.title} Sofia phone wallpaper preview`}
-                    className="object-cover"
-                    fill
-                    loading={index === 0 ? "eager" : "lazy"}
-                    sizes="(max-width: 640px) 45vw, 280px"
-                    src={wallpaper.preview}
-                  />
-                </div>
-              </div>
-              <div className="pt-4">
-                <div className="flex items-center justify-between gap-2">
-                  <h2 className="truncate text-[16px] font-black">{wallpaper.title}</h2>
-                  <span className="shrink-0 rounded-full bg-white/8 px-2 py-1 text-[10px] font-bold text-white/60">{wallpaper.category}</span>
-                </div>
-                {wallpaper.dimensions ? <p className="mt-1 text-[12px] text-white/48">{wallpaper.dimensions}</p> : null}
-                <div className="mt-4 grid grid-cols-[repeat(2,minmax(0,1fr))] gap-2">
-                  <a className="rounded-full bg-white px-3 py-2 text-center text-[12px] font-black text-[#101012]" download href={wallpaper.download}>
-                    Download
-                  </a>
-                  <a className="rounded-full border border-white/10 bg-white/8 px-2 py-2 text-center text-[12px] font-black text-white min-[390px]:px-3" href={wallpaper.download} rel="noopener noreferrer" target="_blank">
-                    Open Full Size
-                  </a>
-                </div>
-              </div>
-            </article>
-          ))}
+        <section className="mt-8">
+          <div className="flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
+            <div className="max-w-2xl">
+              <span className="inline-flex w-fit rounded-full bg-gradient-to-r from-[#ff4f91]/24 to-[#8b5cf6]/24 px-3 py-1 text-[10px] font-black uppercase tracking-[0.16em] text-[#ff8cbd]">
+                Sofia at Home
+              </span>
+              <h2 className="mt-3 text-[26px] font-black leading-8 sm:text-[34px]">Sofia at Home</h2>
+              <p className="mt-2 text-[14px] leading-6 text-white/64">{sofiaAtHomeDescription}</p>
+            </div>
+          </div>
+
+          <div className="mt-5 grid min-w-0 grid-cols-2 gap-3 sm:gap-4 lg:grid-cols-4">
+            {sofiaAtHomeWallpapers.map((wallpaper) => (
+              <WallpaperCard featured key={wallpaper.id} wallpaper={wallpaper} />
+            ))}
+          </div>
+        </section>
+
+        <section className="mt-9">
+          <div className="flex items-end justify-between gap-4">
+            <div>
+              <h2 className="text-[22px] font-black">More Phone Wallpapers</h2>
+              <p className="mt-1 text-[13px] text-white/54">Additional Sofia wallpapers for your lock screen.</p>
+            </div>
+          </div>
+
+          <div className="mt-5 grid min-w-0 grid-cols-2 gap-3 sm:gap-4 lg:grid-cols-4">
+            {sofiaWallpapers.map((wallpaper) => (
+              <WallpaperCard key={wallpaper.id} wallpaper={wallpaper} />
+            ))}
+          </div>
         </section>
 
         <section className="mt-8 rounded-[24px] border border-white/10 bg-[#17171a] p-5">
