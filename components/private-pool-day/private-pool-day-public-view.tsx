@@ -1,5 +1,5 @@
 import Image from "next/image";
-import Link from "next/link";
+import { TrackedLink } from "@/components/analytics-events";
 import { SofiaIcon } from "@/components/sofia-icon";
 import { privatePoolDayCollection, privatePoolDayPublicPreviews } from "@/data/private-pool-day";
 
@@ -16,9 +16,10 @@ const lockedPreviews = privatePoolDayPublicPreviews.slice(2, 5);
 export function PrivatePoolDayPublicView() {
   return (
     <section className="grid gap-5 lg:grid-cols-[0.78fr_1.22fr] lg:items-stretch">
-      <Link
+      <TrackedLink
         aria-label="Unlock this collection"
         className="group relative z-10 min-h-[520px] cursor-pointer overflow-hidden rounded-[28px] border border-white/10 bg-[#17171a] text-left shadow-[0_24px_70px_rgba(0,0,0,0.32)] outline-none focus-visible:ring-2 focus-visible:ring-[#ff4f91]"
+        eventName="collection_preview_click"
         href={privatePoolDayCollection.joinHref}
       >
         <Image
@@ -38,7 +39,7 @@ export function PrivatePoolDayPublicView() {
         <span className="pointer-events-none absolute inset-x-4 bottom-4 rounded-full bg-black/58 px-4 py-2 text-center text-[12px] font-black text-white opacity-0 backdrop-blur transition duration-300 group-hover:opacity-100">
           Join to view the full collection
         </span>
-      </Link>
+      </TrackedLink>
 
       <div className="flex flex-col justify-between rounded-[28px] border border-white/10 bg-[#17171a] p-5 sm:p-7">
         <div>
@@ -51,9 +52,10 @@ export function PrivatePoolDayPublicView() {
         <div className="mt-7">
           <div className="grid grid-cols-2 gap-3">
             {visiblePreviews.slice(1, 3).map((image) => (
-              <Link
+              <TrackedLink
                 aria-label="Unlock this collection"
                 className="group relative z-10 aspect-[4/5] cursor-pointer overflow-hidden rounded-[20px] border border-white/10 bg-[#202024] outline-none focus-visible:ring-2 focus-visible:ring-[#ff4f91]"
+                eventName="collection_preview_click"
                 href={privatePoolDayCollection.joinHref}
                 key={image.src}
               >
@@ -69,14 +71,15 @@ export function PrivatePoolDayPublicView() {
                 <span className="pointer-events-none absolute inset-x-2 bottom-2 rounded-full bg-black/62 px-3 py-1.5 text-center text-[10px] font-black text-white opacity-0 backdrop-blur transition duration-300 group-hover:opacity-100">
                   Join to view the full collection
                 </span>
-              </Link>
+              </TrackedLink>
             ))}
           </div>
           <div className="mt-3 grid grid-cols-3 gap-3">
             {lockedPreviews.map((image) => (
-              <Link
+              <TrackedLink
                 aria-label="Unlock this collection"
                 className="group relative z-10 aspect-[4/5] cursor-pointer overflow-hidden rounded-[18px] border border-white/10 bg-[#202024] outline-none focus-visible:ring-2 focus-visible:ring-[#ff4f91]"
+                eventName="collection_preview_click"
                 href={privatePoolDayCollection.joinHref}
                 key={image.src}
               >
@@ -95,7 +98,7 @@ export function PrivatePoolDayPublicView() {
                 <span className="pointer-events-none absolute inset-x-1.5 bottom-1.5 rounded-full bg-black/64 px-2 py-1 text-center text-[9px] font-black text-white opacity-0 backdrop-blur transition duration-300 group-hover:opacity-100">
                   Join to view the full collection
                 </span>
-              </Link>
+              </TrackedLink>
             ))}
           </div>
           <div className="relative z-20">
@@ -104,12 +107,12 @@ export function PrivatePoolDayPublicView() {
               Choose a membership package to unlock the complete collection.
             </p>
             <div className="mt-6 flex flex-col gap-3 min-[390px]:flex-row">
-              <Link className="relative z-20 inline-flex flex-1 items-center justify-center rounded-full bg-white px-5 py-3 text-[13px] font-black text-[#101012]" href={privatePoolDayCollection.joinHref}>
+              <TrackedLink className="relative z-20 inline-flex flex-1 items-center justify-center rounded-full bg-white px-5 py-3 text-[13px] font-black text-[#101012]" eventName="unlock_collection_click" href={privatePoolDayCollection.joinHref}>
                 {privatePoolDayCollection.unlockText}
-              </Link>
-              <Link className="relative z-20 inline-flex flex-1 items-center justify-center rounded-full border border-white/12 bg-white/8 px-5 py-3 text-[13px] font-black text-white" href={privatePoolDayCollection.joinHref}>
+              </TrackedLink>
+              <TrackedLink className="relative z-20 inline-flex flex-1 items-center justify-center rounded-full border border-white/12 bg-white/8 px-5 py-3 text-[13px] font-black text-white" eventName="member_signin_click" href="/member-login">
                 {privatePoolDayCollection.signInText}
-              </Link>
+              </TrackedLink>
             </div>
           </div>
         </div>

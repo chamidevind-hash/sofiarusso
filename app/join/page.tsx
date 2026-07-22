@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import Link from "next/link";
+import { AnalyticsPageView, TrackedAnchor, TrackedLink, type AnalyticsEventName } from "@/components/analytics-events";
 
 const insiderUrl = process.env.NEXT_PUBLIC_PAYPAL_INSIDER_URL;
 const vipUrl = process.env.NEXT_PUBLIC_PAYPAL_VIP_URL;
@@ -30,6 +30,7 @@ const membershipPackages = [
     features: ["All members-only photo collections", "HD wallpapers", "New monthly drops", "Member voting"],
     buttonLabel: "Join Insider",
     paypalUrl: insiderUrl,
+    eventName: "paypal_insider_click" as AnalyticsEventName,
   },
   {
     name: "Sofia VIP",
@@ -45,6 +46,7 @@ const membershipPackages = [
     ],
     buttonLabel: "Join VIP",
     paypalUrl: vipUrl,
+    eventName: "paypal_vip_click" as AnalyticsEventName,
     featured: true,
   },
   {
@@ -54,12 +56,14 @@ const membershipPackages = [
     features: ["Permanent access to current collections", "Future wallpaper collections", "No monthly payment", "One-time purchase"],
     buttonLabel: "Get Lifetime Access",
     paypalUrl: lifetimeUrl,
+    eventName: "paypal_lifetime_click" as AnalyticsEventName,
   },
 ];
 
 export default function JoinPage() {
   return (
     <div className="min-h-screen bg-[#0b0b0d] pt-14 text-white">
+      <AnalyticsPageView eventName="join_page_view" />
       <main className="mx-auto w-full max-w-6xl px-4 py-8 sm:px-6 sm:py-12">
         <header className="mx-auto max-w-2xl text-center">
           <p className="text-[10px] font-black uppercase tracking-[0.18em] text-[#ff4f91]">Membership</p>
@@ -104,16 +108,17 @@ export default function JoinPage() {
 
               <div className="relative z-20 mt-auto pt-6">
                 {membershipPackage.paypalUrl ? (
-                  <a
+                  <TrackedAnchor
                     className={`relative z-20 inline-flex w-full items-center justify-center rounded-full px-5 py-3 text-[13px] font-black transition hover:-translate-y-0.5 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#ff4f91] ${
                       membershipPackage.featured ? "bg-white text-[#101012]" : "border border-white/12 bg-white/8 text-white hover:bg-white/12"
                     }`}
+                    eventName={membershipPackage.eventName}
                     href={membershipPackage.paypalUrl}
                     rel="noopener noreferrer"
                     target="_blank"
                   >
                     {membershipPackage.buttonLabel}
-                  </a>
+                  </TrackedAnchor>
                 ) : (
                   <button
                     className="inline-flex w-full cursor-not-allowed items-center justify-center rounded-full border border-white/10 bg-white/5 px-5 py-3 text-[13px] font-black text-white/42"
@@ -138,12 +143,13 @@ export default function JoinPage() {
             Sign in to access your unlocked collections and member-only downloads.
           </p>
           <div className="mt-5">
-            <Link
+            <TrackedLink
               className="inline-flex rounded-full border border-white/12 bg-white/8 px-5 py-3 text-[13px] font-black text-white transition hover:bg-white/12 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#ff4f91]"
+              eventName="member_signin_click"
               href="/member-login"
             >
               Member Sign In
-            </Link>
+            </TrackedLink>
           </div>
           <p className="mt-4 text-[12px] leading-5 text-white/50">
             Need help accessing your membership?{" "}

@@ -4,6 +4,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 import { CloseIcon, MenuIcon } from "@/components/icons";
+import { TrackedLink } from "@/components/analytics-events";
 
 const navLinks = [
   { href: "/", label: "Home" },
@@ -33,14 +34,16 @@ export function Header() {
         <nav aria-label="Main navigation" className="hidden items-center gap-2 sm:flex">
           {navLinks.map((link) => {
             const active = pathname === link.href || (link.href !== "/" && pathname.startsWith(link.href));
-            return (
-              <Link
-                className={`rounded-full px-3 py-2 text-[12px] font-bold transition hover:bg-white/8 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#ff4f91] ${
-                  active ? "bg-white text-[#101012]" : "text-white/74"
-                }`}
-                href={link.href}
-                key={link.href}
-              >
+            const className = `rounded-full px-3 py-2 text-[12px] font-bold transition hover:bg-white/8 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#ff4f91] ${
+              active ? "bg-white text-[#101012]" : "text-white/74"
+            }`;
+
+            return link.href === "/member-login" ? (
+              <TrackedLink className={className} eventName="member_signin_click" href={link.href} key={link.href}>
+                {link.label}
+              </TrackedLink>
+            ) : (
+              <Link className={className} href={link.href} key={link.href}>
                 {link.label}
               </Link>
             );
@@ -68,11 +71,19 @@ export function Header() {
 
       <div className={`overflow-hidden border-t border-white/10 bg-[#0f0f12] transition-[max-height] duration-300 sm:hidden ${open ? "max-h-72" : "max-h-0 border-t-transparent"}`}>
         <nav aria-label="Mobile navigation" className="mx-auto grid w-full max-w-6xl min-w-0 gap-1 px-4 py-3">
-          {navLinks.map((link) => (
-            <Link className="rounded-[16px] px-4 py-3 text-[14px] font-bold text-white/82 hover:bg-white/8" href={link.href} key={link.href}>
-              {link.label}
-            </Link>
-          ))}
+          {navLinks.map((link) => {
+            const className = "rounded-[16px] px-4 py-3 text-[14px] font-bold text-white/82 hover:bg-white/8";
+
+            return link.href === "/member-login" ? (
+              <TrackedLink className={className} eventName="member_signin_click" href={link.href} key={link.href}>
+                {link.label}
+              </TrackedLink>
+            ) : (
+              <Link className={className} href={link.href} key={link.href}>
+                {link.label}
+              </Link>
+            );
+          })}
           <a className="rounded-[16px] px-4 py-3 text-[14px] font-bold text-white/82 hover:bg-white/8" href={merchUrl} rel="noopener noreferrer" target="_blank">
             Merch
           </a>

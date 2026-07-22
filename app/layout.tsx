@@ -56,6 +56,20 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="en" className={`${cormorant.variable} ${manrope.variable}`}>
+      <head>
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-89XNQDN557" />
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-89XNQDN557');
+`,
+          }}
+        />
+      </head>
       <body>
         <ServiceWorkerCleanup />
         <Header />
