@@ -1,35 +1,20 @@
 "use client";
 
 import Link, { type LinkProps } from "next/link";
-import { AnchorHTMLAttributes, ReactNode, useEffect } from "react";
+import { AnchorHTMLAttributes, ReactNode, useEffect, useRef, useState } from "react";
+import { addCurrentUtmParams, sendAnalyticsEvent, type AnalyticsEventName, type AnalyticsEventParams } from "@/lib/analytics";
 
-export type AnalyticsEventName =
-  | "collection_preview_click"
-  | "unlock_collection_click"
-  | "join_page_view"
-  | "paypal_insider_click"
-  | "paypal_vip_click"
-  | "paypal_lifetime_click"
-  | "member_signin_click";
+export function AnalyticsPageView({ eventName, params }: { eventName: AnalyticsEventName; params?: AnalyticsEventParams }) {
+  const sent = useRef(false);
 
-declare global {
-  interface Window {
-    gtag?: (...args: unknown[]) => void;
-  }
-}
-
-export function sendAnalyticsEvent(eventName: AnalyticsEventName) {
-  if (typeof window === "undefined" || typeof window.gtag !== "function") {
-    return;
-  }
-
-  window.gtag("event", eventName);
-}
-
-export function AnalyticsPageView({ eventName }: { eventName: AnalyticsEventName }) {
   useEffect(() => {
-    sendAnalyticsEvent(eventName);
-  }, [eventName]);
+    if (sent.current) {
+      return;
+    }
+
+    sent.current = true;
+    sendAnalyticsEvent(eventName, params);
+  }, [eventName, params]);
 
   return null;
 }
@@ -38,15 +23,26 @@ type TrackedLinkProps = LinkProps &
   Omit<AnchorHTMLAttributes<HTMLAnchorElement>, keyof LinkProps | "href"> & {
     children: ReactNode;
     eventName: AnalyticsEventName;
+    eventParams?: AnalyticsEventParams;
+    preserveUtm?: boolean;
   };
 
-export function TrackedLink({ children, eventName, onClick, ...props }: TrackedLinkProps) {
+export function TrackedLink({ children, eventName, eventParams, href, onClick, preserveUtm = false, ...props }: TrackedLinkProps) {
+  const [trackedHref, setTrackedHref] = useState(href);
+
+  useEffect(() => {
+    if (preserveUtm && typeof href === "string") {
+      setTrackedHref(addCurrentUtmParams(href));
+    }
+  }, [href, preserveUtm]);
+
   return (
     <Link
       {...props}
+      href={trackedHref}
       onClick={(event) => {
         onClick?.(event);
-        sendAnalyticsEvent(eventName);
+        sendAnalyticsEvent(eventName, eventParams);
       }}
     >
       {children}
@@ -57,16 +53,17 @@ export function TrackedLink({ children, eventName, onClick, ...props }: TrackedL
 type TrackedAnchorProps = AnchorHTMLAttributes<HTMLAnchorElement> & {
   children: ReactNode;
   eventName: AnalyticsEventName;
+  eventParams?: AnalyticsEventParams;
   href: string;
 };
 
-export function TrackedAnchor({ children, eventName, onClick, ...props }: TrackedAnchorProps) {
+export function TrackedAnchor({ children, eventName, eventParams, onClick, ...props }: TrackedAnchorProps) {
   return (
     <a
       {...props}
       onClick={(event) => {
         onClick?.(event);
-        sendAnalyticsEvent(eventName);
+        sendAnalyticsEvent(eventName, eventParams);
       }}
     >
       {children}

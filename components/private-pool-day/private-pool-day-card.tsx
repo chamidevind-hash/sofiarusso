@@ -1,5 +1,5 @@
 import Image from "next/image";
-import Link from "next/link";
+import { TrackedLink } from "@/components/analytics-events";
 import { SofiaIcon } from "@/components/sofia-icon";
 import { privatePoolDayCollection } from "@/data/private-pool-day";
 
@@ -9,11 +9,13 @@ type PrivatePoolDayCardProps = {
 
 export function PrivatePoolDayCard({ compact = false }: PrivatePoolDayCardProps) {
   return (
-    <Link
+    <TrackedLink
       aria-label={`${privatePoolDayCollection.buttonText}: ${privatePoolDayCollection.title}`}
       className={`group relative block overflow-hidden rounded-[24px] border border-white/10 bg-[#17171a] shadow-[0_20px_55px_rgba(0,0,0,0.34)] outline-none transition duration-300 hover:-translate-y-0.5 focus-visible:ring-2 focus-visible:ring-[#ff4f91] active:scale-[0.985] ${
         compact ? "min-h-[260px]" : "h-[190px] sm:h-[220px]"
       }`}
+      eventName="private_pool_preview_click"
+      eventParams={{ collection_name: "private_pool_day" }}
       href={privatePoolDayCollection.href}
     >
       <Image
@@ -41,6 +43,6 @@ export function PrivatePoolDayCard({ compact = false }: PrivatePoolDayCardProps)
           <SofiaIcon className="h-5 w-5" name="arrow" />
         </span>
       </div>
-    </Link>
+    </TrackedLink>
   );
 }

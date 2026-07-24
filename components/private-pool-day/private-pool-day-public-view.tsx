@@ -20,7 +20,9 @@ export function PrivatePoolDayPublicView() {
         aria-label="Unlock this collection"
         className="group relative z-10 min-h-[520px] cursor-pointer overflow-hidden rounded-[28px] border border-white/10 bg-[#17171a] text-left shadow-[0_24px_70px_rgba(0,0,0,0.32)] outline-none focus-visible:ring-2 focus-visible:ring-[#ff4f91]"
         eventName="collection_preview_click"
+        eventParams={{ collection_name: "private_pool_day", source_page: "collection" }}
         href={privatePoolDayCollection.joinHref}
+        preserveUtm
       >
         <Image
           alt={visiblePreviews[0].alt}
@@ -56,8 +58,10 @@ export function PrivatePoolDayPublicView() {
                 aria-label="Unlock this collection"
                 className="group relative z-10 aspect-[4/5] cursor-pointer overflow-hidden rounded-[20px] border border-white/10 bg-[#202024] outline-none focus-visible:ring-2 focus-visible:ring-[#ff4f91]"
                 eventName="collection_preview_click"
+                eventParams={{ collection_name: "private_pool_day", source_page: "collection" }}
                 href={privatePoolDayCollection.joinHref}
                 key={image.src}
+                preserveUtm
               >
                 <Image
                   alt={image.alt}
@@ -79,9 +83,11 @@ export function PrivatePoolDayPublicView() {
               <TrackedLink
                 aria-label="Unlock this collection"
                 className="group relative z-10 aspect-[4/5] cursor-pointer overflow-hidden rounded-[18px] border border-white/10 bg-[#202024] outline-none focus-visible:ring-2 focus-visible:ring-[#ff4f91]"
-                eventName="collection_preview_click"
+                eventName="locked_preview_click"
+                eventParams={{ collection_name: "private_pool_day", source_page: "collection" }}
                 href={privatePoolDayCollection.joinHref}
                 key={image.src}
+                preserveUtm
               >
                 <Image
                   alt={image.alt}
@@ -104,13 +110,24 @@ export function PrivatePoolDayPublicView() {
           <div className="relative z-20">
             <p className="mt-3 text-center text-[12px] font-bold text-white/62">{privatePoolDayCollection.lockedCountLabel}</p>
             <p className="mt-2 text-center text-[12px] leading-5 text-white/54">
-              Choose a membership package to unlock the complete collection.
+              Choose a membership package to view the complete collection.
             </p>
             <div className="mt-6 flex flex-col gap-3 min-[390px]:flex-row">
-              <TrackedLink className="relative z-20 inline-flex flex-1 items-center justify-center rounded-full bg-white px-5 py-3 text-[13px] font-black text-[#101012]" eventName="unlock_collection_click" href={privatePoolDayCollection.joinHref}>
+              <TrackedLink
+                className="relative z-20 inline-flex flex-1 items-center justify-center rounded-full bg-white px-5 py-3 text-[13px] font-black text-[#101012]"
+                eventName="unlock_collection_click"
+                eventParams={{ collection_name: "private_pool_day", source_page: "collection" }}
+                href={privatePoolDayCollection.joinHref}
+                preserveUtm
+              >
                 {privatePoolDayCollection.unlockText}
               </TrackedLink>
-              <TrackedLink className="relative z-20 inline-flex flex-1 items-center justify-center rounded-full border border-white/12 bg-white/8 px-5 py-3 text-[13px] font-black text-white" eventName="member_signin_click" href="/member-login">
+              <TrackedLink
+                className="relative z-20 inline-flex flex-1 items-center justify-center rounded-full border border-white/12 bg-white/8 px-5 py-3 text-[13px] font-black text-white"
+                eventName="member_signin_click"
+                eventParams={{ collection_name: "private_pool_day", source_page: "collection" }}
+                href="/member-login"
+              >
                 {privatePoolDayCollection.signInText}
               </TrackedLink>
             </div>

@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import { PrivatePoolDayCard } from "@/components/private-pool-day/private-pool-day-card";
+import { PrivatePoolDayHomepageFeature } from "@/components/private-pool-day/private-pool-day-homepage-feature";
 import { SofiaFeaturedCard } from "@/components/sofia-featured-card";
 import { SofiaFooter } from "@/components/sofia-footer";
 import { SofiaImageGrid } from "@/components/sofia-image-grid";
@@ -52,6 +53,8 @@ export default function HomePage() {
         <div className="px-4">
           <SofiaProfileInfo />
           <SofiaSocialIcons />
+
+          <PrivatePoolDayHomepageFeature />
 
           <div className="mt-1.5 grid gap-2.5 sm:mt-3.5 sm:gap-3">
             {primaryLinks.map((link) => (

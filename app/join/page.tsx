@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
-import { AnalyticsPageView, TrackedAnchor, TrackedLink, type AnalyticsEventName } from "@/components/analytics-events";
+import { AnalyticsPageView, TrackedAnchor, TrackedLink } from "@/components/analytics-events";
+import type { AnalyticsEventName } from "@/lib/analytics";
 
 const insiderUrl = process.env.NEXT_PUBLIC_PAYPAL_INSIDER_URL;
 const vipUrl = process.env.NEXT_PUBLIC_PAYPAL_VIP_URL;
@@ -31,6 +32,7 @@ const membershipPackages = [
     buttonLabel: "Join Insider",
     paypalUrl: insiderUrl,
     eventName: "paypal_insider_click" as AnalyticsEventName,
+    packageName: "insider" as const,
   },
   {
     name: "Sofia VIP",
@@ -47,6 +49,7 @@ const membershipPackages = [
     buttonLabel: "Join VIP",
     paypalUrl: vipUrl,
     eventName: "paypal_vip_click" as AnalyticsEventName,
+    packageName: "vip" as const,
     featured: true,
   },
   {
@@ -57,13 +60,14 @@ const membershipPackages = [
     buttonLabel: "Get Lifetime Access",
     paypalUrl: lifetimeUrl,
     eventName: "paypal_lifetime_click" as AnalyticsEventName,
+    packageName: "lifetime" as const,
   },
 ];
 
 export default function JoinPage() {
   return (
     <div className="min-h-screen bg-[#0b0b0d] pt-14 text-white">
-      <AnalyticsPageView eventName="join_page_view" />
+      <AnalyticsPageView eventName="join_page_view" params={{ source_page: "join" }} />
       <main className="mx-auto w-full max-w-6xl px-4 py-8 sm:px-6 sm:py-12">
         <header className="mx-auto max-w-2xl text-center">
           <p className="text-[10px] font-black uppercase tracking-[0.18em] text-[#ff4f91]">Membership</p>
@@ -113,6 +117,7 @@ export default function JoinPage() {
                       membershipPackage.featured ? "bg-white text-[#101012]" : "border border-white/12 bg-white/8 text-white hover:bg-white/12"
                     }`}
                     eventName={membershipPackage.eventName}
+                    eventParams={{ package_name: membershipPackage.packageName, source_page: "join" }}
                     href={membershipPackage.paypalUrl}
                     rel="noopener noreferrer"
                     target="_blank"
@@ -146,6 +151,7 @@ export default function JoinPage() {
             <TrackedLink
               className="inline-flex rounded-full border border-white/12 bg-white/8 px-5 py-3 text-[13px] font-black text-white transition hover:bg-white/12 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#ff4f91]"
               eventName="member_signin_click"
+              eventParams={{ source_page: "join" }}
               href="/member-login"
             >
               Member Sign In
