@@ -3,6 +3,13 @@
 export type AnalyticsEventName =
   | "private_pool_preview_click"
   | "homepage_membership_click"
+  | "collection_card_click"
+  | "bottom_membership_click"
+  | "homepage_main_teaser_click"
+  | "homepage_clear_teaser_click"
+  | "homepage_locked_teaser_click"
+  | "sofia_at_home_click"
+  | "wallpaper_section_click"
   | "collection_preview_click"
   | "locked_preview_click"
   | "unlock_collection_click"
@@ -15,7 +22,9 @@ export type AnalyticsEventName =
 export type AnalyticsEventParams = {
   collection_name?: "private_pool_day";
   package_name?: "insider" | "vip" | "lifetime";
+  section_name?: "sofia_at_home" | "hd_wallpapers";
   source_page?: "homepage" | "collection" | "join";
+  teaser_position?: "main" | "clear_1" | "clear_2" | "locked_1" | "locked_2";
 };
 
 declare global {
