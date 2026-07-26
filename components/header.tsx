@@ -23,7 +23,7 @@ export function Header() {
 
   return (
     <header className="fixed inset-x-0 top-0 z-50 border-b border-white/10 bg-[#0b0b0d]/92 text-white backdrop-blur-xl">
-      <div className="mx-auto flex h-14 w-full max-w-6xl min-w-0 items-center justify-between gap-3 px-4 sm:px-6">
+      <div className="mx-auto flex h-14 w-full max-w-7xl min-w-0 items-center justify-between gap-3 px-4 sm:px-6">
         <Link aria-label="SofiaRusso home" className="flex min-w-0 items-center gap-2 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#ff4f91]" href="/">
           <span className="grid h-8 w-8 place-items-center rounded-full bg-gradient-to-br from-[#ff4f91] to-[#8b5cf6] text-[12px] font-black text-white">
             SR
