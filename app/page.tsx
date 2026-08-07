@@ -62,46 +62,26 @@ const homepageTeasers = {
 
 const sofiaAtHomeImages = [
   {
-    alt: "Sofia relaxing at home in a casual outfit",
-    locked: false,
-    src: "/images/wallpapers/sofia-at-home/sofia-at-home-01.webp",
-  },
-  {
-    alt: "Sofia in a natural at-home lifestyle moment",
-    locked: false,
-    src: "/images/wallpapers/sofia-at-home/sofia-at-home-02.webp",
-  },
-  {
-    alt: "Sofia taking a casual at-home photo",
-    locked: false,
-    src: "/images/wallpapers/sofia-at-home/sofia-at-home-03.webp",
-  },
-  {
-    alt: "Locked Sofia At Home preview",
+    alt: "Sofia At Home private preview 1",
     locked: true,
-    src: "/images/wallpapers/sofia-at-home/sofia-at-home-04.webp",
+    src: "/images/members/sofia-at-home-set-01/previews/sofia-at-home-back-01.webp",
+  },
+  {
+    alt: "Sofia At Home private preview 2",
+    locked: true,
+    src: "/images/members/sofia-at-home-set-01/previews/sofia-at-home-back-02.webp",
+  },
+  {
+    alt: "Sofia At Home private preview 3",
+    locked: true,
+    src: "/images/members/sofia-at-home-set-01/previews/sofia-at-home-back-03.webp",
+  },
+  {
+    alt: "Sofia At Home private preview 4",
+    locked: true,
+    src: "/images/members/sofia-at-home-set-01/previews/sofia-at-home-back-04.webp",
   },
 ] as const;
-
-const wallpaperImages = [
-  {
-    alt: "Sofia city lights phone wallpaper",
-    src: "/downloads/wallpapers/sofia-city-lights-wallpaper.webp",
-  },
-  {
-    alt: "Sofia Los Angeles night phone wallpaper",
-    src: "/downloads/wallpapers/sofia-los-angeles-night-wallpaper.webp",
-  },
-  {
-    alt: "Sofia mirror moment phone wallpaper",
-    src: "/downloads/wallpapers/sofia-mirror-moment-wallpaper.webp",
-  },
-  {
-    alt: "Sofia white satin phone wallpaper",
-    src: "/downloads/wallpapers/sofia-white-satin-wallpaper.webp",
-  },
-] as const;
-
 export default function HomePage() {
   const primaryLinks = sofiaLinks.slice(0, 4);
   const secondaryLinks = sofiaLinks.slice(4);
