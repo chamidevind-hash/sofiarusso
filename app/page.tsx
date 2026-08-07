@@ -1,12 +1,9 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import { TrackedLink } from "@/components/analytics-events";
-import { SofiaFeaturedCard } from "@/components/sofia-featured-card";
 import { SofiaFooter } from "@/components/sofia-footer";
-import { SofiaImageGrid } from "@/components/sofia-image-grid";
 import { SofiaLinkCard } from "@/components/sofia-link-card";
 import { SofiaMerchSection } from "@/components/sofia-merch-section";
-import { SofiaProfileCover } from "@/components/sofia-profile-cover";
 import { SofiaProfileInfo, SofiaStatsRow } from "@/components/sofia-profile-info";
 import { SofiaSocialIcons } from "@/components/sofia-social-icons";
 import { SofiaSupportCard } from "@/components/sofia-support-card";
@@ -119,7 +116,6 @@ export default function HomePage() {
       </div>
 
       <div className="relative z-10 mx-auto min-h-screen w-full max-w-[520px] bg-[var(--page-bg)] shadow-none sm:my-6 sm:min-h-[calc(100svh-48px)] sm:rounded-[30px] sm:border sm:border-white/10 sm:shadow-[0_28px_90px_rgba(0,0,0,0.52)]">
-        <SofiaProfileCover />
 
         <div className="px-4">
           <section className="-mt-12 rounded-t-[28px] bg-[var(--page-bg)] pb-5 pt-6 text-center">
@@ -407,10 +403,6 @@ export default function HomePage() {
 
           <SofiaStatsRow />
 
-          <div className="mt-6 sm:mt-7">
-            <SofiaFeaturedCard />
-          </div>
-
           <div className="mt-6 flex items-center justify-between sm:mt-7">
             <h2 className="text-[17px] font-extrabold leading-6 text-[var(--text-primary)]">Explore Sofia's world</h2>
             <span className="text-[12px] font-bold leading-5 text-[var(--text-secondary)]">Latest</span>
@@ -426,7 +418,6 @@ export default function HomePage() {
           </div>
 
           <SofiaMerchSection />
-          <SofiaImageGrid />
           <SofiaSupportCard />
           <SofiaFooter />
         </div>
