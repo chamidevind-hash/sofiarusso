@@ -82,6 +82,24 @@ const sofiaAtHomeImages = [
     src: "/images/members/sofia-at-home-set-01/previews/sofia-at-home-back-04.webp",
   },
 ] as const;
+const wallpaperImages = [
+  {
+    alt: "Sofia city lights phone wallpaper",
+    src: "/downloads/wallpapers/sofia-city-lights-wallpaper.webp",
+  },
+  {
+    alt: "Sofia Los Angeles night phone wallpaper",
+    src: "/downloads/wallpapers/sofia-los-angeles-night-wallpaper.webp",
+  },
+  {
+    alt: "Sofia mirror moment phone wallpaper",
+    src: "/downloads/wallpapers/sofia-mirror-moment-wallpaper.webp",
+  },
+  {
+    alt: "Sofia white satin phone wallpaper",
+    src: "/downloads/wallpapers/sofia-white-satin-wallpaper.webp",
+  },
+] as const;
 export default function HomePage() {
   const primaryLinks = sofiaLinks.slice(0, 4);
   const secondaryLinks = sofiaLinks.slice(4);
