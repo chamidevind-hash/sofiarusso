@@ -15,6 +15,11 @@ export type GalleryPhoto = {
   orientation: "portrait" | "tall";
 };
 
+export type BlogSection = {
+  heading: string;
+  paragraphs: string[];
+};
+
 export type BlogPost = {
   slug: string;
   title: string;
@@ -23,6 +28,8 @@ export type BlogPost = {
   category: string;
   readTime: string;
   date: string;
+  intro: string;
+  sections: BlogSection[];
 };
 
 export type DownloadPack = {

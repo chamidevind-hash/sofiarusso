@@ -1,29 +1,235 @@
 [
   {
-    "slug": "luxury-mirror-selfie-look",
-    "title": "How to Create a Luxury Mirror Selfie Look",
-    "excerpt": "A simple guide to natural light, balanced framing, and styling a polished mirror portrait.",
+    "slug": "everyday-outfit-ideas",
+    "title": "7 Simple Everyday Outfit Ideas That Always Look Put Together",
+    "excerpt": "Easy outfit combinations for days when you want to look polished without spending too much time getting ready.",
     "image": "/images/sofia-gallery-2.webp",
-    "category": "Photography",
-    "readTime": "4 min read",
-    "date": "June 24, 2026"
+    "category": "Fashion",
+    "readTime": "6 min read",
+    "date": "August 8, 2026",
+    "intro": "A good everyday outfit does not need to be complicated. The easiest looks usually start with a few comfortable basics, one clear focal point and colors that work naturally together.",
+    "sections": [
+      {
+        "heading": "Start with a simple base",
+        "paragraphs": [
+          "A fitted T-shirt, tank top or lightweight knit creates an easy foundation for an everyday outfit. Neutral shades such as white, black, cream, grey and navy are especially useful because they can be combined with almost anything.",
+          "Once the base feels right, add one stronger element such as denim, tailored trousers, a skirt or a lightweight jacket."
+        ]
+      },
+      {
+        "heading": "Try a white shirt and denim combination",
+        "paragraphs": [
+          "A relaxed white button-up shirt with straight-leg jeans is one of the easiest combinations to repeat. You can wear the shirt fully buttoned, loosely tucked or open over a simple tank top.",
+          "Clean sneakers keep the look casual, while simple flats or ankle boots make it feel slightly more polished."
+        ]
+      },
+      {
+        "heading": "Use one fitted piece and one relaxed piece",
+        "paragraphs": [
+          "Balancing proportions can make a basic outfit feel more intentional. A fitted top works well with wide-leg trousers, while a loose sweater can be paired with a straighter skirt or fitted jeans.",
+          "The contrast creates shape without requiring complicated layering."
+        ]
+      },
+      {
+        "heading": "Keep accessories simple",
+        "paragraphs": [
+          "A small shoulder bag, clean watch, sunglasses or simple jewelry can finish an outfit without making it feel over-styled.",
+          "For everyday dressing, one or two accessories are often enough."
+        ]
+      }
+    ]
   },
   {
-    "slug": "satin-dress-styling-ideas",
-    "title": "Satin Dress Styling Ideas",
-    "excerpt": "Let beautiful fabric lead the look with clean accessories, tonal layers, and thoughtful contrast.",
-    "image": "/images/sofia-collection-satin.webp",
-    "category": "Style Notes",
-    "readTime": "5 min read",
-    "date": "June 17, 2026"
-  },
-  {
-    "slug": "golden-hour-photo-inspiration",
-    "title": "Golden Hour Photo Inspiration",
-    "excerpt": "Find flattering angles, warm textures, and quiet locations for your next sunset photo session.",
+    "slug": "mirror-selfie-lighting-tips",
+    "title": "Mirror Selfie Lighting Tips for More Natural Photos",
+    "excerpt": "Simple ways to use window light, room lighting and camera positioning for cleaner mirror photos.",
     "image": "/images/sofia-gallery-1.webp",
-    "category": "Inspiration",
-    "readTime": "3 min read",
-    "date": "June 10, 2026"
+    "category": "Photography",
+    "readTime": "5 min read",
+    "date": "August 8, 2026",
+    "intro": "Lighting usually matters more than the mirror, phone or room. A small change in where you stand can completely change the look of a mirror selfie.",
+    "sections": [
+      {
+        "heading": "Use indirect window light",
+        "paragraphs": [
+          "Soft daylight from a nearby window is usually easier to work with than direct sunlight. Stand where the light reaches your face and outfit without creating harsh bright patches.",
+          "Cloudy days and late afternoon light can be especially flattering because the contrast is lower."
+        ]
+      },
+      {
+        "heading": "Avoid mixing too many light colors",
+        "paragraphs": [
+          "If warm ceiling lights and cool daylight are both strong, skin tones and clothing colors can look inconsistent. When possible, use one main source of light.",
+          "Turning off unnecessary lamps can sometimes make the photo look cleaner immediately."
+        ]
+      },
+      {
+        "heading": "Move away from the mirror",
+        "paragraphs": [
+          "Standing slightly farther from the mirror gives you more control over framing and usually reduces the exaggerated perspective that can happen when the phone is very close.",
+          "You can then crop the final photo rather than trying to fill the frame perfectly while shooting."
+        ]
+      },
+      {
+        "heading": "Clean the background",
+        "paragraphs": [
+          "Small distractions become more noticeable in mirror photos. Remove unnecessary bottles, cables, clothing and other objects before taking the picture.",
+          "A simple background helps the person and outfit become the natural focus of the image."
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "how-to-style-a-satin-dress",
+    "title": "How to Style a Satin Dress Without Overdoing It",
+    "excerpt": "A simple guide to shoes, layers, accessories and colors that work well with satin.",
+    "image": "/images/sofia-collection-satin.webp",
+    "category": "Fashion",
+    "readTime": "6 min read",
+    "date": "August 8, 2026",
+    "intro": "Satin already has visual interest because it reflects light and moves differently from matte fabrics. That means the rest of the outfit can stay relatively simple.",
+    "sections": [
+      {
+        "heading": "Let the fabric be the focus",
+        "paragraphs": [
+          "When a satin dress has a strong shine or elegant drape, avoid adding too many competing textures. Simple shoes and minimal jewelry usually work best.",
+          "Neutral accessories also make the outfit easier to wear in different settings."
+        ]
+      },
+      {
+        "heading": "Add a structured layer",
+        "paragraphs": [
+          "A blazer, lightweight coat or cropped jacket can balance the softness of satin. This works especially well when you want to make a dress feel more suitable for dinner or an evening event.",
+          "Choose a clean shape rather than a heavily decorated outer layer."
+        ]
+      },
+      {
+        "heading": "Choose shoes based on the occasion",
+        "paragraphs": [
+          "Simple heels create a more dressed-up look, while clean flats or minimal sandals can make satin feel more relaxed.",
+          "For cooler weather, ankle boots can add useful contrast without competing with the dress."
+        ]
+      },
+      {
+        "heading": "Use color carefully",
+        "paragraphs": [
+          "Cream, champagne, black, navy and muted jewel tones tend to photograph beautifully in satin because the material naturally creates highlights and shadows.",
+          "If the dress is already a strong color, keeping the rest of the outfit neutral is an easy approach."
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "home-photo-background-ideas",
+    "title": "6 Easy Background Ideas for Better Photos at Home",
+    "excerpt": "Simple home locations that can make everyday photos feel cleaner and more intentional.",
+    "image": "/images/sofia-gallery-3.webp",
+    "category": "Photography",
+    "readTime": "5 min read",
+    "date": "August 8, 2026",
+    "intro": "You do not need a studio to create a clean background. Many of the best home photo locations are ordinary spaces with good light and fewer distractions.",
+    "sections": [
+      {
+        "heading": "Use a plain wall near a window",
+        "paragraphs": [
+          "A simple wall gives you a neutral background while window light adds natural shape to the subject.",
+          "Move slightly away from the wall to create more depth and softer shadows."
+        ]
+      },
+      {
+        "heading": "Try the edge of a bed",
+        "paragraphs": [
+          "A neatly made bed can create a relaxed lifestyle setting. Neutral bedding works particularly well because it does not compete with clothing or skin tones.",
+          "Keep bedside tables and surrounding objects simple."
+        ]
+      },
+      {
+        "heading": "Use a wardrobe mirror",
+        "paragraphs": [
+          "Full-length mirrors are useful when you want to show an entire outfit. Position yourself so the background contains only a small amount of furniture.",
+          "A slight angle can also prevent the phone and camera from dominating the composition."
+        ]
+      },
+      {
+        "heading": "Look for textured but quiet spaces",
+        "paragraphs": [
+          "Curtains, wooden doors, neutral tiles and simple shelving can add texture without making the image feel busy.",
+          "The goal is to give the photo some character while keeping attention on the main subject."
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "phone-wallpaper-ideas",
+    "title": "Phone Wallpaper Ideas for a Cleaner Home Screen",
+    "excerpt": "Minimal wallpaper styles that keep icons readable while still making your phone feel personal.",
+    "image": "/images/sofia-wallpaper-preview.webp",
+    "category": "Digital Style",
+    "readTime": "4 min read",
+    "date": "August 8, 2026",
+    "intro": "A wallpaper can completely change how a phone feels, but the most practical designs usually leave enough visual space for icons, widgets and notifications.",
+    "sections": [
+      {
+        "heading": "Choose images with negative space",
+        "paragraphs": [
+          "Photos with open sky, walls, blurred backgrounds or darker empty areas work well because text and icons remain easier to read.",
+          "Try to avoid placing the main subject directly behind the clock or notification area."
+        ]
+      },
+      {
+        "heading": "Use darker images for busy home screens",
+        "paragraphs": [
+          "Dark or muted wallpapers often make colorful app icons easier to identify.",
+          "City-night photographs, shadows and soft gradients are good choices when you use many widgets."
+        ]
+      },
+      {
+        "heading": "Keep lock-screen details in mind",
+        "paragraphs": [
+          "The top and lower portions of a phone screen often contain system information. A strong wallpaper composition leaves those areas relatively simple.",
+          "Before saving a wallpaper, preview it on the actual device to make sure important details are not hidden."
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "city-night-photo-tips",
+    "title": "How to Take Better City Photos at Night With Your Phone",
+    "excerpt": "Practical ideas for steadier shots, cleaner light and more natural-looking night photos.",
+    "image": "/images/sofia-wallpaper-preview.webp",
+    "category": "Photography",
+    "readTime": "6 min read",
+    "date": "August 8, 2026",
+    "intro": "Night photography can look impressive even with a phone, but the camera has much less light to work with. A few simple adjustments can make photos noticeably sharper and more balanced.",
+    "sections": [
+      {
+        "heading": "Find a stable position",
+        "paragraphs": [
+          "Phones often use slower shutter speeds in dark conditions. Holding the phone against a wall, railing or other stable surface can reduce blur.",
+          "If your phone activates a night mode automatically, stay still until the exposure is complete."
+        ]
+      },
+      {
+        "heading": "Avoid the brightest lights",
+        "paragraphs": [
+          "Very bright signs and streetlights can make the rest of the scene appear too dark. Try changing your angle so those lights are not directly in the center of the frame.",
+          "Tapping a medium-bright part of the scene can also help the camera choose a more balanced exposure."
+        ]
+      },
+      {
+        "heading": "Use reflections",
+        "paragraphs": [
+          "Wet pavement, windows and polished surfaces can reflect city lights and add depth to night images.",
+          "Reflections are especially useful when the scene itself feels visually empty."
+        ]
+      },
+      {
+        "heading": "Do not over-edit",
+        "paragraphs": [
+          "Heavy sharpening, extreme saturation and strong noise reduction can make night photos look artificial.",
+          "Small adjustments to exposure, contrast and warmth usually preserve a more natural smartphone look."
+        ]
+      }
+    ]
   }
 ]
