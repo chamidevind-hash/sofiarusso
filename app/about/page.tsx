@@ -31,7 +31,7 @@ export default function AboutPage() {
               fill
               priority
               sizes="(max-width: 1024px) 100vw, 52vw"
-              src="/images/sofia-collection-hotel.webp"
+              src="/images/blog/indoor-phone-photography.webp"
             />
           </div>
           <div className="lg:pr-8">
@@ -76,7 +76,7 @@ export default function AboutPage() {
             <p className="mt-6 text-sm leading-7 text-taupe sm:text-base">
               Sofia Hub begins as an open collection of imagery, writing, and digital releases. Future membership features will add richer collections and personal updates while keeping the experience calm and easy to use.
             </p>
-            <ButtonLink className="mt-8" href="/join" variant="outline">Join the beginning</ButtonLink>
+            <ButtonLink className="mt-8" href="/blog" variant="outline">Read the journal</ButtonLink>
           </div>
           <div className="relative aspect-[5/4] overflow-hidden bg-cream">
             <Image
@@ -84,7 +84,7 @@ export default function AboutPage() {
               className="object-cover object-[center_38%]"
               fill
               sizes="(max-width: 1024px) 100vw, 55vw"
-              src="/images/sofia-gallery-1.webp"
+              src="/images/blog/capsule-wardrobe.webp"
             />
           </div>
         </div>
@@ -92,3 +92,6 @@ export default function AboutPage() {
     </>
   );
 }
+
+
+

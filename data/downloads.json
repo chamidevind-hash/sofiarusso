@@ -2,22 +2,22 @@
   {
     "slug": "mobile-wallpapers",
     "title": "Mobile Wallpapers",
-    "description": "Elegant vertical edits designed to bring a quiet-luxury mood to your lock screen.",
-    "image": "/images/sofia-wallpaper-preview.webp",
+    "description": "Clean vertical wallpapers designed for modern iPhone and Android lock screens.",
+    "image": "/downloads/wallpapers/sofia-city-lights-wallpaper.png",
     "format": "iPhone & Android"
   },
   {
     "slug": "desktop-wallpapers",
-    "title": "Desktop Wallpapers",
-    "description": "Wide, minimal compositions for a warm and beautifully considered workspace.",
-    "image": "/images/sofia-wallpaper-preview.webp",
-    "format": "Desktop & Tablet"
+    "title": "Minimal Wallpapers",
+    "description": "Calm neutral textures and city-inspired compositions for a clean digital setup.",
+    "image": "/downloads/wallpapers/sofia-white-satin-wallpaper.webp",
+    "format": "Phone & Tablet"
   },
   {
     "slug": "weekly-sofia-pack",
-    "title": "Weekly Sofia Pack",
-    "description": "A fresh curated mix of seasonal wallpapers and exclusive editorial moments.",
-    "image": "/images/sofia-wallpaper-preview.webp",
+    "title": "City Wallpaper Pack",
+    "description": "A curated mix of city lights, interiors and minimal wallpaper styles.",
+    "image": "/downloads/wallpapers/sofia-los-angeles-night-wallpaper.webp",
     "format": "Mixed sizes"
   }
 ]

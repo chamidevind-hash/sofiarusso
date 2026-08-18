@@ -1,4 +1,4 @@
-export type SofiaIconKey =
+﻿export type SofiaIconKey =
   | "arrow"
   | "bag"
   | "coffee"
@@ -60,21 +60,13 @@ const amazonWishlistUrl = process.env.NEXT_PUBLIC_AMAZON_WISHLIST_URL ?? "https:
 export const sofiaProfile = {
   name: "Sofia",
   username: "@sofia",
-  meta: "Virtual Creator · Los Angeles",
-  bio: "Luxury nights, private diaries and exclusive virtual collections.",
-  coverImage: "/images/sofia-wallpaper-preview.webp",
-  avatarImage: "/images/sofia-collection-mirror.webp",
+  meta: "Virtual Creator Â· Los Angeles",
+  bio: "Fashion, photography and everyday lifestyle inspiration.",
+  coverImage: "/images/blog/city-photo-walk.webp",
+  avatarImage: "/images/blog/colors-photograph-well.webp",
 };
 
-export const sofiaStats = ["Exclusive collections", "HD wallpapers", "New posts daily"];
-
-export const sofiaFeaturedCollection = {
-  title: "Los Angeles After Dark",
-  subtitle: "Sofia's latest exclusive collection",
-  cta: "Explore collection",
-  href: "/collections/los-angeles-after-dark",
-  image: "/images/sofia-wallpaper-preview.webp",
-};
+export const sofiaStats = ["Lifestyle collections", "HD wallpapers", "New posts daily"];
 
 export const sofiaLinks: SofiaLink[] = [
   {
@@ -89,9 +81,9 @@ export const sofiaLinks: SofiaLink[] = [
   },
   {
     icon: "lock",
-    title: "Enter SofiaHub",
-    subtitle: "Exclusive collections and private diaries",
-    href: "/join",
+    title: "Explore Sofia",
+    subtitle: "Fashion, photography and lifestyle inspiration",
+    href: "/collections",
     variant: "pink",
     label: "Popular",
   },
@@ -115,9 +107,9 @@ export const sofiaLinks: SofiaLink[] = [
   },
   {
     icon: "images",
-    title: "Latest Exclusive Collection",
-    subtitle: "Unseen photos from Los Angeles",
-    href: "/collections/los-angeles-after-dark",
+    title: "Lifestyle Collections",
+    subtitle: "Fashion, photography and lifestyle inspiration",
+    href: "/collections",
     variant: "coral",
   },
   {
@@ -179,24 +171,24 @@ export const sofiaSocialLinks: SofiaSocialLink[] = [
 export const sofiaPreviewImages: SofiaPreviewImage[] = [
   {
     alt: "Sofia overlooking the city at night",
-    href: "/collections/los-angeles-after-dark",
-    image: "/images/sofia-wallpaper-preview.webp",
+    href: "/collections",
+    image: "/images/blog/city-photo-walk.webp",
     featured: true,
   },
   {
     alt: "Sofia in a hotel mirror portrait",
-    href: "/collections/los-angeles-after-dark",
-    image: "/images/sofia-collection-mirror.webp",
+    href: "/collections",
+    image: "/images/blog/colors-photograph-well.webp",
   },
   {
     alt: "Sofia in a luxury hotel lobby",
-    href: "/collections/los-angeles-after-dark",
-    image: "/images/sofia-collection-hotel.webp",
+    href: "/collections",
+    image: "/images/blog/indoor-phone-photography.webp",
   },
   {
     alt: "Sofia in a warm hotel room at golden hour",
-    href: "/collections/los-angeles-after-dark",
-    image: "/images/sofia-collection-satin.webp",
+    href: "/collections",
+    image: "/images/blog/capsule-wardrobe.webp",
   },
 ];
 
@@ -218,3 +210,5 @@ export const sofiaMerch = {
   wishlistCta: "View Wishlist",
   wishlistHref: amazonWishlistUrl,
 };
+
+

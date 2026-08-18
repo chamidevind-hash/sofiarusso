@@ -1,8 +1,9 @@
+cat > /var/www/sofiarusso/ecosystem.config.cjs <<'EOF'
 module.exports = {
   apps: [
     {
       name: "sofiarusso",
-      cwd: "D:/Sofia HUB GIT",
+      cwd: "/var/www/sofiarusso",
       script: "node_modules/next/dist/bin/next",
       args: "start -p 3001",
       env: {
@@ -11,3 +12,4 @@ module.exports = {
     }
   ]
 };
+EOF

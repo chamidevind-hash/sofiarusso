@@ -1,4 +1,4 @@
-import type { Metadata, Viewport } from "next";
+﻿import type { Metadata, Viewport } from "next";
 import { Cormorant_Garamond, Manrope } from "next/font/google";
 import "./globals.css";
 import { Footer } from "@/components/footer";
@@ -32,23 +32,23 @@ export const metadata: Metadata = {
     default: "SofiaRusso - SofiaHub",
     template: "%s | SofiaRusso",
   },
-  description: "Virtual Sofia Russo collections, HD phone wallpapers, official merchandise and creator updates.",
+  description: "Fashion, photography, lifestyle inspiration and free phone wallpapers from Sofia Russo.",
   keywords: ["Sofia Russo", "SofiaHub", "virtual creator", "wallpapers", "digital collections"],
   authors: [{ name: "SofiaRusso" }],
   creator: "SofiaRusso",
   openGraph: {
     title: "SofiaRusso",
-    description: "Virtual Sofia Russo collections, HD phone wallpapers and creator updates.",
+    description: "Fashion, photography, lifestyle inspiration and free phone wallpapers from Sofia Russo.",
     type: "website",
     locale: "en_US",
     siteName: "SofiaRusso",
-    images: [{ url: "/images/sofia-hero.webp", width: 1024, height: 1536, alt: "SofiaRusso editorial" }],
+    images: [{ url: "/images/blog/capsule-wardrobe.webp", width: 1024, height: 1536, alt: "SofiaRusso editorial" }],
   },
   twitter: {
     card: "summary_large_image",
     title: "SofiaRusso",
-    description: "Virtual Sofia Russo collections, HD phone wallpapers and creator updates.",
-    images: ["/images/sofia-hero.webp"],
+    description: "Fashion, photography, lifestyle inspiration and free phone wallpapers from Sofia Russo.",
+    images: ["/images/blog/capsule-wardrobe.webp"],
   },
   robots: { index: true, follow: true },
 };
@@ -79,3 +79,4 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
     </html>
   );
 }
+
