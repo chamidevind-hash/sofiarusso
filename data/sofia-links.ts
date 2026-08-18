@@ -1,4 +1,4 @@
-﻿export type SofiaIconKey =
+export type SofiaIconKey =
   | "arrow"
   | "bag"
   | "coffee"
@@ -54,7 +54,6 @@ const paypalCoffeeUrl =
 
 const facebookUrl = process.env.NEXT_PUBLIC_FACEBOOK_URL ?? "https://facebook.com/";
 const instagramUrl = process.env.NEXT_PUBLIC_INSTAGRAM_URL ?? "https://instagram.com/";
-const fourthwallUrl = process.env.NEXT_PUBLIC_FOURTHWALL_URL ?? "https://fourthwall.com/";
 const amazonWishlistUrl = process.env.NEXT_PUBLIC_AMAZON_WISHLIST_URL ?? "https://www.amazon.com/hz/wishlist/";
 
 export const sofiaProfile = {
@@ -86,15 +85,6 @@ export const sofiaLinks: SofiaLink[] = [
     href: "/collections",
     variant: "pink",
     label: "Popular",
-  },
-  {
-    icon: "bag",
-    title: "My Merch",
-    subtitle: "Shop Sofia's official apparel and creator merchandise",
-    href: fourthwallUrl,
-    external: true,
-    variant: "pink",
-    label: "Official Store",
   },
   {
     icon: "gift",
@@ -199,16 +189,3 @@ export const sofiaSupport = {
   href: paypalCoffeeUrl,
   note: "Sofia is a virtual creator. Support is voluntary.",
 };
-
-export const sofiaMerch = {
-  title: "Official Sofia Merch",
-  subtitle: "Creator apparel, accessories and limited collections.",
-  cta: "Visit the Store",
-  href: fourthwallUrl,
-  wishlistTitle: "Amazon Wishlist",
-  wishlistText: "Explore Sofia's favorite fashion, beauty and creator essentials.",
-  wishlistCta: "View Wishlist",
-  wishlistHref: amazonWishlistUrl,
-};
-
-

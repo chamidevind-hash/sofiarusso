@@ -1,9 +1,11 @@
 "use client";
 
+
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 import { CloseIcon, MenuIcon } from "@/components/icons";
+
 
 const navLinks = [
   { href: "/", label: "Home" },
@@ -13,14 +15,14 @@ const navLinks = [
   { href: "/about", label: "About" },
 ];
 
-const merchUrl =
-  process.env.NEXT_PUBLIC_FOURTHWALL_URL ?? "https://fourthwall.com/";
 
 export function Header() {
   const pathname = usePathname();
   const [open, setOpen] = useState(false);
 
+
   useEffect(() => setOpen(false), [pathname]);
+
 
   return (
     <header className="fixed inset-x-0 top-0 z-50 border-b border-white/10 bg-[#0b0b0d]/92 text-white backdrop-blur-xl">
@@ -34,10 +36,12 @@ export function Header() {
             SR
           </span>
 
+
           <span className="truncate text-[15px] font-black tracking-normal">
             SofiaRusso
           </span>
         </Link>
+
 
         <nav
           aria-label="Main navigation"
@@ -48,12 +52,11 @@ export function Header() {
               pathname === link.href ||
               (link.href !== "/" && pathname.startsWith(link.href));
 
+
             return (
               <Link
                 className={`rounded-full px-3 py-2 text-[12px] font-bold transition hover:bg-white/8 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#ff4f91] ${
-                  active
-                    ? "bg-white text-[#101012]"
-                    : "text-white/74"
+                  active ? "bg-white text-[#101012]" : "text-white/74"
                 }`}
                 href={link.href}
                 key={link.href}
@@ -62,16 +65,8 @@ export function Header() {
               </Link>
             );
           })}
-
-          <a
-            className="rounded-full px-3 py-2 text-[12px] font-bold text-white/74 transition hover:bg-white/8 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#ff4f91]"
-            href={merchUrl}
-            rel="noopener noreferrer"
-            target="_blank"
-          >
-            Merch
-          </a>
         </nav>
+
 
         <button
           aria-expanded={open}
@@ -88,11 +83,10 @@ export function Header() {
         </button>
       </div>
 
+
       <div
         className={`overflow-hidden border-t border-white/10 bg-[#0f0f12] transition-[max-height] duration-300 sm:hidden ${
-          open
-            ? "max-h-72"
-            : "max-h-0 border-t-transparent"
+          open ? "max-h-72" : "max-h-0 border-t-transparent"
         }`}
       >
         <nav
@@ -108,15 +102,6 @@ export function Header() {
               {link.label}
             </Link>
           ))}
-
-          <a
-            className="rounded-[16px] px-4 py-3 text-[14px] font-bold text-white/82 hover:bg-white/8"
-            href={merchUrl}
-            rel="noopener noreferrer"
-            target="_blank"
-          >
-            Merch
-          </a>
         </nav>
       </div>
     </header>

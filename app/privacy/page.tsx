@@ -91,7 +91,7 @@ export default function PrivacyPage() {
 
             <p className="mt-3">
               SofiaRusso.vip may contain links to social networks, download
-              services, merchandise providers or other third-party websites.
+              services or other third-party websites.
               Those services operate under their own privacy policies and
               practices.
             </p>
