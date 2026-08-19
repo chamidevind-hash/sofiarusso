@@ -1,26 +1,20 @@
 export type SofiaIconKey =
   | "arrow"
-  | "bag"
-  | "coffee"
   | "facebook"
-  | "gift"
   | "globe"
   | "home"
   | "images"
   | "instagram"
   | "lock"
   | "mail"
-  | "paypal"
   | "phone"
   | "share"
   | "sparkles";
 
 export type SofiaLinkVariant =
-  | "primary"
   | "pink"
   | "coral"
   | "blue"
-  | "wishlist"
   | "facebook"
   | "instagram";
 
@@ -49,35 +43,28 @@ export type SofiaPreviewImage = {
   featured?: boolean;
 };
 
-const paypalCoffeeUrl =
-  process.env.NEXT_PUBLIC_PAYPAL_COFFEE_URL ?? "https://www.paypal.me/SofiaRusso/5USD";
+const facebookUrl =
+  process.env.NEXT_PUBLIC_FACEBOOK_URL ?? "https://facebook.com/";
 
-const facebookUrl = process.env.NEXT_PUBLIC_FACEBOOK_URL ?? "https://facebook.com/";
-const instagramUrl = process.env.NEXT_PUBLIC_INSTAGRAM_URL ?? "https://instagram.com/";
-const amazonWishlistUrl = process.env.NEXT_PUBLIC_AMAZON_WISHLIST_URL ?? "https://www.amazon.com/hz/wishlist/";
+const instagramUrl =
+  process.env.NEXT_PUBLIC_INSTAGRAM_URL ?? "https://instagram.com/";
 
 export const sofiaProfile = {
   name: "Sofia",
   username: "@sofia",
-  meta: "Virtual Creator Â· Los Angeles",
+  meta: "Virtual Creator · Los Angeles",
   bio: "Fashion, photography and everyday lifestyle inspiration.",
   coverImage: "/images/blog/city-photo-walk.webp",
   avatarImage: "/images/blog/colors-photograph-well.webp",
 };
 
-export const sofiaStats = ["Lifestyle collections", "HD wallpapers", "New posts daily"];
+export const sofiaStats = [
+  "Lifestyle collections",
+  "HD wallpapers",
+  "New posts daily",
+];
 
 export const sofiaLinks: SofiaLink[] = [
-  {
-    icon: "coffee",
-    title: "Buy Sofia a Coffee",
-    subtitle: "Support the next virtual photoshoot",
-    href: paypalCoffeeUrl,
-    external: true,
-    variant: "primary",
-    label: "$5 support",
-    ariaLabel: "Buy Sofia a Coffee for five dollars using PayPal",
-  },
   {
     icon: "lock",
     title: "Explore Sofia",
@@ -85,15 +72,6 @@ export const sofiaLinks: SofiaLink[] = [
     href: "/collections",
     variant: "pink",
     label: "Popular",
-  },
-  {
-    icon: "gift",
-    title: "Sofia's Amazon Wishlist",
-    subtitle: "See Sofia's favorite outfits, accessories and creator gear",
-    href: amazonWishlistUrl,
-    external: true,
-    variant: "wishlist",
-    label: "Wishlist",
   },
   {
     icon: "images",
@@ -141,20 +119,9 @@ export const sofiaSocialLinks: SofiaSocialLink[] = [
     external: true,
   },
   {
-    icon: "mail",
-    label: "Email SofiaHub",
-    href: "mailto:hello@sofiahub.com",
-  },
-  {
     icon: "globe",
-    label: "Visit SofiaHub website",
+    label: "Visit SofiaRusso website",
     href: "/",
-  },
-  {
-    icon: "paypal",
-    label: "Support Sofia on PayPal",
-    href: paypalCoffeeUrl,
-    external: true,
   },
 ];
 
@@ -181,11 +148,3 @@ export const sofiaPreviewImages: SofiaPreviewImage[] = [
     image: "/images/blog/capsule-wardrobe.webp",
   },
 ];
-
-export const sofiaSupport = {
-  title: "Help create Sofia's next collection",
-  text: "Support new locations, outfits and exclusive virtual photoshoots.",
-  buttonText: "Buy Sofia a Coffee - $5",
-  href: paypalCoffeeUrl,
-  note: "Sofia is a virtual creator. Support is voluntary.",
-};

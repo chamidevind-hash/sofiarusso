@@ -1,4 +1,4 @@
-﻿import type { Metadata, Viewport } from "next";
+import type { Metadata, Viewport } from "next";
 import { Cormorant_Garamond, Manrope } from "next/font/google";
 import "./globals.css";
 import { Footer } from "@/components/footer";
@@ -29,11 +29,11 @@ export const viewport: Viewport = {
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default: "SofiaRusso - SofiaHub",
+    default: "SofiaRusso",
     template: "%s | SofiaRusso",
   },
   description: "Fashion, photography, lifestyle inspiration and free phone wallpapers from Sofia Russo.",
-  keywords: ["Sofia Russo", "SofiaHub", "virtual creator", "wallpapers", "digital collections"],
+  keywords: ["Sofia Russo", "virtual creator", "wallpapers", "digital collections"],
   authors: [{ name: "SofiaRusso" }],
   creator: "SofiaRusso",
   openGraph: {
