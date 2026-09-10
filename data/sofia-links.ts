@@ -1,12 +1,16 @@
 export type SofiaIconKey =
   | "arrow"
+  | "bag"
+  | "coffee"
   | "facebook"
+  | "gift"
   | "globe"
   | "home"
   | "images"
   | "instagram"
   | "lock"
   | "mail"
+  | "paypal"
   | "phone"
   | "share"
   | "sparkles";
@@ -16,7 +20,9 @@ export type SofiaLinkVariant =
   | "coral"
   | "blue"
   | "facebook"
-  | "instagram";
+  | "instagram"
+  | "primary"
+  | "wishlist";
 
 export type SofiaLink = {
   title: string;

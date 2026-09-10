@@ -1,4 +1,3 @@
-cat > /var/www/sofiarusso/ecosystem.config.cjs <<'EOF'
 module.exports = {
   apps: [
     {
@@ -12,4 +11,3 @@ module.exports = {
     }
   ]
 };
-EOF
