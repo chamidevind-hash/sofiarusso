@@ -80,7 +80,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
           ]
         });
 
-        // All other regions keep the current Analytics behavior.
+        // All other regions.
         gtag('consent', 'default', {
           ad_storage: 'granted',
           ad_user_data: 'granted',
@@ -91,6 +91,12 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
         gtag('js', new Date());
       `,
     }}
+  />
+
+  <script
+    async
+    src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1659865282222560"
+    crossOrigin="anonymous"
   />
 
   <script
