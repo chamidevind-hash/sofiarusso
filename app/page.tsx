@@ -265,37 +265,6 @@ export default function HomePage() {
             <SofiaSocialIcons />
           </div>
         </section>
-
-        <nav
-          aria-label="Site information"
-          className="mt-9 flex flex-wrap justify-center gap-x-5 gap-y-3 text-[12px] font-bold text-white/55"
-        >
-          <Link href="/blog" className="hover:text-white">
-            Blog
-          </Link>
-
-          <Link href="/about" className="hover:text-white">
-            About
-          </Link>
-
-          <Link href="/downloads" className="hover:text-white">
-            Wallpapers
-          </Link>
-
-          <Link href="/contact" className="hover:text-white">
-            Contact
-          </Link>
-
-          <Link href="/privacy" className="hover:text-white">
-            Privacy
-          </Link>
-
-          <Link href="/terms" className="hover:text-white">
-            Terms
-          </Link>
-        </nav>
-
-        <SofiaFooter />
       </div>
     </main>
   );
