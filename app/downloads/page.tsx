@@ -1,4 +1,4 @@
-﻿import type { Metadata } from "next";
+import type { Metadata } from "next";
 import Image from "next/image";
 import {
   sofiaWallpapers,
@@ -18,7 +18,7 @@ export const metadata: Metadata = {
       "Free modern phone wallpapers for iPhone and Android.",
     images: [
       {
-        url: "/downloads/wallpapers/sofia-city-lights-wallpaper.png",
+        url: "/downloads/wallpapers/sofia-city-lights-wallpaper-preview.webp",
         width: 1080,
         height: 1920,
         alt: "City lights phone wallpaper",

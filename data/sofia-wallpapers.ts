@@ -1,4 +1,4 @@
-﻿export type SofiaWallpaper = {
+export type SofiaWallpaper = {
   id: string;
   title: string;
   preview: string;
@@ -46,7 +46,7 @@ export const sofiaWallpapers: SofiaWallpaper[] = [
   {
     id: "city-lights",
     title: "City Lights",
-    preview: "/downloads/wallpapers/sofia-city-lights-wallpaper.png",
+    preview: "/downloads/wallpapers/sofia-city-lights-wallpaper-preview.webp",
     download: "/downloads/wallpapers/sofia-city-lights-wallpaper.png",
     category: "Night",
     description:
