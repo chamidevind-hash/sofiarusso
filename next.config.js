@@ -13,7 +13,7 @@ const nextConfig = {
         ],
       },
       {
-        source: "/downloads/:path*",
+        source: "/downloads/wallpapers/:path*",
         headers: [
           {
             key: "Cache-Control",
